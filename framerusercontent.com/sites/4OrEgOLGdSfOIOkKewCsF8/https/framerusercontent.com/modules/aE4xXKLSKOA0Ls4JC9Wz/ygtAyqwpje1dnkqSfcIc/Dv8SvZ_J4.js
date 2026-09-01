@@ -408,7 +408,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             children: /*#__PURE__*/ _jsx(NavLink, {
                                                 height: "100%",
                                                 id: "sm_AICaxG",
-                                                JFcX5H46A: "https://www.linkedin.com/in/aayushtalreja/",
+                                                JFcX5H46A: "https://www.linkedin.com/in/tanisq-pandey/",
                                                 kE4aesh2j: "LINKEDIN",
                                                 layoutId: "sm_AICaxG",
                                                 variant: matchVariant("UNehzXs8I"),
