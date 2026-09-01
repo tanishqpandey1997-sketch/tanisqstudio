@@ -1,0 +1,14 @@
+{
+  "name": "tanisqfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -s . -p 3000",
+    "start": "npx serve -s . -p 3000",
+    "serve": "npx serve -s . -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
