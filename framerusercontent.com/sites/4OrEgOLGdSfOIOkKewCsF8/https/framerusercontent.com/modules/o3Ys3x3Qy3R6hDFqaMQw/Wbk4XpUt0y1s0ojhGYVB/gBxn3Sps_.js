@@ -1299,10 +1299,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         height: "100%",
                                         id: "Jmx45291g",
                                         image: addImageAlt({
-                                            pixelHeight: 2614,
-                                            pixelWidth: 2740,
-                                            src: "https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?width=2740&height=2614",
-                                            srcSet: "https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=512&width=2740&height=2614 512w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=1024&width=2740&height=2614 1024w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=2048&width=2740&height=2614 2048w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?width=2740&height=2614 2740w"
+                                            pixelHeight: 1254,
+                                            pixelWidth: 1254,
+                                            src: "./folio.png",
+                                            srcSet: "./folio.png 512w,./folio.png 1024w,./folio.png 1254w"
                                         }, ""),
                                         layoutId: "Jmx45291g",
                                         mode: "layer-in-view",

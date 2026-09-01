@@ -114,7 +114,7 @@ const getProps = ({
         F8We4KdSM: endColor ? ? props.F8We4KdSM ? ? "var(--token-6c52689b-2844-43ed-ba14-1d9e767fc7ae, rgb(36, 36, 36))",
         FP7tUrPps: textBalance ? ? props.FP7tUrPps,
         qaxcA7D5Q: startColor ? ? props.qaxcA7D5Q ? ? "var(--token-b5c8d8ec-0a9e-4754-a050-6407b6d1bb92, rgba(66, 66, 66, 0.5))",
-        uRY_pb6U2: text ? ? props.uRY_pb6U2 ? ? "                         I DESIGN AND DEVELOP DIGITAL TOOLS WITH AN EMPHASIS ON CLARITY, PERFORMANCE, AND RESTRAINT. CURRENTLY WORKING ON PRODUCTS THAT VALUE LONG-TERM THINKING OVER QUICK WINS.\n",
+        uRY_pb6U2: text ? ? props.uRY_pb6U2 ? ? "                         I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
         variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "F5Z5Wy32p"
     };
 };
@@ -285,7 +285,7 @@ addPropertyControls(FrameryU8pOOSm0, {
         type: ControlType.Enum
     },
     uRY_pb6U2: {
-        defaultValue: "                         I DESIGN AND DEVELOP DIGITAL TOOLS WITH AN EMPHASIS ON CLARITY, PERFORMANCE, AND RESTRAINT. CURRENTLY WORKING ON PRODUCTS THAT VALUE LONG-TERM THINKING OVER QUICK WINS.\n",
+        defaultValue: "                         I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
         displayTextArea: true,
         title: "Text",
         type: ControlType.String

@@ -659,10 +659,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 width: "100%",
                                                 WkKRTRQw8: "yaXJUOJDJ",
                                                 ZbGKKrDzr: addImageAlt({
-                                                    pixelHeight: 2614,
-                                                    pixelWidth: 2740,
-                                                    src: "https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?width=2740&height=2614",
-                                                    srcSet: "https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=512&width=2740&height=2614 512w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=1024&width=2740&height=2614 1024w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?scale-down-to=2048&width=2740&height=2614 2048w,https://framerusercontent.com/images/9Z3enTxhI3fCeva5Dy5FfZLCs.png?width=2740&height=2614 2740w"
+                                                    pixelHeight: 1254,
+                                                    pixelWidth: 1254,
+                                                    src: "./folio.png",
+                                                    srcSet: "./folio.png 512w,./folio.png 1024w,./folio.png 1254w"
                                                 }, "")
                                             })
                                         })
@@ -792,11 +792,11 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         breakpoint: baseVariant,
                                         overrides: {
                                             dCyvWi7OD: {
-                                                uRY_pb6U2: "                I DESIGN AND DEVELOP DIGITAL TOOLS WITH AN EMPHASIS ON CLARITY, PERFORMANCE, AND RESTRAINT. CURRENTLY WORKING ON PRODUCTS THAT VALUE LONG-TERM THINKING OVER QUICK WINS.\n",
+                                                uRY_pb6U2: "                I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
                                                 variant: matchVariant("P9mJ0Yace")
                                             },
                                             lRuGrkaGM: {
-                                                uRY_pb6U2: "                     I DESIGN AND DEVELOP DIGITAL TOOLS WITH AN EMPHASIS ON CLARITY, PERFORMANCE, AND RESTRAINT. CURRENTLY WORKING ON PRODUCTS THAT VALUE LONG-TERM THINKING OVER QUICK WINS.\n",
+                                                uRY_pb6U2: "                     I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
                                                 variant: matchVariant("qunrjHryV")
                                             }
                                         },
@@ -810,7 +810,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             style: {
                                                 width: "100%"
                                             },
-                                            uRY_pb6U2: "                         I DESIGN AND DEVELOP DIGITAL TOOLS WITH AN EMPHASIS ON CLARITY, PERFORMANCE, AND RESTRAINT. CURRENTLY WORKING ON PRODUCTS THAT VALUE LONG-TERM THINKING OVER QUICK WINS.\n",
+                                            uRY_pb6U2: "                         I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
                                             variant: matchVariant("F5Z5Wy32p"),
                                             width: "100%"
                                         })
@@ -2128,10 +2128,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 children: /*#__PURE__*/ _jsx(EmailLink, {
                                                     DWLrszkCT: true,
                                                     height: "100%",
-                                                    HNFmliIAn: "AMTALREJA02@GMAIL.COM",
+                                                    HNFmliIAn: "TANISQPANDEY1@GMAIL.COM",
                                                     id: "bUCLzKTyO",
                                                     layoutId: "bUCLzKTyO",
-                                                    S3QO4o6HC: "mailto:amtalreja02@gmail.com",
+                                                    S3QO4o6HC: "mailto:tanisqpandey1@gmail.com",
                                                     variant: matchVariant("WPNylBvz2"),
                                                     width: "100%",
                                                     YfNuZxBKS: "var(--token-6c52689b-2844-43ed-ba14-1d9e767fc7ae, rgb(36, 36, 36))"
