@@ -1338,7 +1338,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         transformTemplate: transformTemplate1,
                                         children: /*#__PURE__*/ _jsx(Embed, {
                                             height: "100%",
-                                            html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="360" height="360" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>',
+                                            html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="360" height="360" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>',
                                             id: "dd2MqqZo4",
                                             layoutId: "dd2MqqZo4",
                                             radius: "0px",
@@ -1351,16 +1351,16 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             zoom: 1,
                                             ...addPropertyOverrides({
                                                 Fx_HxrzLn: {
-                                                    html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="100" height="100" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
+                                                    html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="100" height="100" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
                                                 },
                                                 hOhb2sh9X: {
-                                                    html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="260" height="260" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
+                                                    html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="260" height="260" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
                                                 },
                                                 sGTsHP52r: {
-                                                    html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="100" height="100" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
+                                                    html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="100" height="100" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
                                                 },
                                                 Tay2kkwlj: {
-                                                    html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="260" height="260" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
+                                                    html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="260" height="260" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>'
                                                 }
                                             }, baseVariant, gestureVariant)
                                         })

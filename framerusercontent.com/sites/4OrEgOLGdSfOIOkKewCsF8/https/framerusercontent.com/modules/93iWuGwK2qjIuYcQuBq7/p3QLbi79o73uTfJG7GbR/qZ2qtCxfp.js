@@ -243,7 +243,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         scopeId: "qZ2qtCxfp",
                                         children: /*#__PURE__*/ _jsx(Embed, {
                                             height: "100%",
-                                            html: '<iframe src="https://aayu5hgit.github.io/AT-Logo-3D/#embed width="42" height="42" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>',
+                                            html: '<iframe src="/aayu5hgit.github.io/AT-Logo-3D/index.html" width="42" height="42" style="border:0;background:transparent" loading="lazy" title="Logo mark"></iframe>',
                                             id: "uYbFIOmcE",
                                             layoutId: "uYbFIOmcE",
                                             radius: "0px",
