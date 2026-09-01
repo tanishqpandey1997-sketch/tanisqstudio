@@ -1918,7 +1918,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             HNFmliIAn: "LET'S CHAT",
                                             id: "agL95Mc4u",
                                             layoutId: "agL95Mc4u",
-                                            S3QO4o6HC: "https://wa.link/4ukbux",
+                                            S3QO4o6HC: "https://wa.me/917906955915",
                                             variant: matchVariant("WPNylBvz2"),
                                             width: "100%",
                                             YfNuZxBKS: "var(--token-6c52689b-2844-43ed-ba14-1d9e767fc7ae, rgb(36, 36, 36))",
