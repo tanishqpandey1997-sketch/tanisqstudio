@@ -97,13 +97,13 @@ const getProps = ({
     ...props
 }) => {
     return { ...props,
-        F0WxQoIup: video ? ? props.F0WxQoIup ? ? "https://framerusercontent.com/assets/2Y27sJsCOiKMe45J1uHXbAWeuEg.mp4",
+        F0WxQoIup: video ? ? props.F0WxQoIup ? ? "/framerusercontent.com/assets/2Y27sJsCOiKMe45J1uHXbAWeuEg.mp4",
         INTXz6T87: image ? ? props.INTXz6T87 ? ? {
             alt: "",
             pixelHeight: 704,
             pixelWidth: 608,
-            src: "https://framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704",
-            srcSet: "https://framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704 608w"
+            src: "/framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704",
+            srcSet: "/framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704 608w"
         },
         t1XKquqZ3: padding ? ? props.t1XKquqZ3 ? ? "24px 100px 40px 24px",
         variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "HtEJ37fOY"
@@ -216,7 +216,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                 posterEnabled: false,
                                 srcFile: F0WxQoIup,
                                 srcType: "Upload",
-                                srcUrl: "https://framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4",
+                                srcUrl: "/framerusercontent.com/assets/MLWPbW1dUQawJLhhun3dBwpgJak.mp4",
                                 startTime: 0,
                                 style: {
                                     height: "100%",
@@ -252,8 +252,8 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                             pixelHeight: 1596,
                             pixelWidth: 2294,
                             sizes: `calc(${componentViewport?.width||"100vw"} + 14px)`,
-                            src: "https://framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?width=2294&height=1596",
-                            srcSet: "https://framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=512&width=2294&height=1596 512w,https://framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=1024&width=2294&height=1596 1024w,https://framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=2048&width=2294&height=1596 2048w,https://framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?width=2294&height=1596 2294w"
+                            src: "/framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?width=2294&height=1596",
+                            srcSet: "/framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=512&width=2294&height=1596 512w,/framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=1024&width=2294&height=1596 1024w,/framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?scale-down-to=2048&width=2294&height=1596 2048w,/framerusercontent.com/images/DJmgEyS6aXK9ScQoQF627rroM.png?width=2294&height=1596 2294w"
                         },
                         className: "framer-dd6lhm",
                         "data-framer-name": "Old-Tv-PNG 1",

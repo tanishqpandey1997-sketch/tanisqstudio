@@ -97,14 +97,14 @@ const getProps = ({
     ...props
 }) => {
     return { ...props,
-        j1W802LF4: video ? ? props.j1W802LF4 ? ? "https://framerusercontent.com/assets/2Y27sJsCOiKMe45J1uHXbAWeuEg.mp4",
+        j1W802LF4: video ? ? props.j1W802LF4 ? ? "/framerusercontent.com/assets/2Y27sJsCOiKMe45J1uHXbAWeuEg.mp4",
         variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "rTQMzvbb_",
         WkKRTRQw8: humanReadableEnumMap[type] ? ? type ? ? props.WkKRTRQw8 ? ? "HtEJ37fOY",
         ZbGKKrDzr: image ? ? props.ZbGKKrDzr ? ? {
             pixelHeight: 704,
             pixelWidth: 608,
-            src: "https://framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704",
-            srcSet: "https://framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704 608w"
+            src: "/framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704",
+            srcSet: "/framerusercontent.com/images/uDJcTuXTorHyzMn8hEgBl85CMo.png?width=608&height=704 608w"
         }
     };
 };
