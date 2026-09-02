@@ -1549,7 +1549,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             "--framer-text-alignment": "right",
                                             "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                         },
-                                        children: "I care about building products that are reliable, easy to use, and easy to maintain."
+                                        children: "I DESIGN DIGITAL EXPERIENCES FOR A WORLD WHERE TECHNOLOGY CAN DO MORE. MY JOB IS TO MAKE THAT POWER FEEL CLEAR, TRUSTWORTHY, ACCESSIBLE, AND HUMAN."
                                     })
                                 }),
                                 className: "framer-nc1ec7",
@@ -1574,7 +1574,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "I care about building products that are reliable, easy to use, and easy to maintain."
+                                                children: "I DESIGN DIGITAL EXPERIENCES FOR A WORLD WHERE TECHNOLOGY CAN DO MORE. MY JOB IS TO MAKE THAT POWER FEEL CLEAR, TRUSTWORTHY, ACCESSIBLE, AND HUMAN."
                                             })
                                         })
                                     },
@@ -1588,7 +1588,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "I care about building products that are reliable, easy to use, and easy to maintain."
+                                                children: "I DESIGN DIGITAL EXPERIENCES FOR A WORLD WHERE TECHNOLOGY CAN DO MORE. MY JOB IS TO MAKE THAT POWER FEEL CLEAR, TRUSTWORTHY, ACCESSIBLE, AND HUMAN."
                                             })
                                         })
                                     }
