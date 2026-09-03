@@ -213,7 +213,7 @@ const getProps = ({
             src: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850",
             srcSet: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=512&width=1144&height=850 512w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=1024&width=1144&height=850 1024w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850 1144w"
         },
-        qcNqdzcd1: link6 ? ? props.qcNqdzcd1,
+        qcNqdzcd1: link6 ? ? props.qcNqdzcd1 ? ? "https://cypherconnect-new-prod.web.app/",
         qFagBS4wQ: cursor ? ? props.qFagBS4wQ,
         qjZ6AGDEr: title3 ? ? props.qjZ6AGDEr ? ? "WEBSITE DESIGN",
         tBabQp3BT: link5 ? ? props.tBabQp3BT,

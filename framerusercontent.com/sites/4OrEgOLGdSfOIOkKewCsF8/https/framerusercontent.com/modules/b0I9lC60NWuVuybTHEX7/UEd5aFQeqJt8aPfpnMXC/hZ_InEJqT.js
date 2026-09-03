@@ -203,7 +203,7 @@ const getProps = ({
             src: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850",
             srcSet: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=512&width=1144&height=850 512w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=1024&width=1144&height=850 1024w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850 1144w"
         },
-        dquZ8ACJd: link6 ? ? props.dquZ8ACJd,
+        dquZ8ACJd: link6 ? ? props.dquZ8ACJd ? ? "https://cypherconnect-new-prod.web.app/",
         ERx8nTTUu: image4 ? ? props.ERx8nTTUu ? ? {
             alt: "",
             pixelHeight: 850,

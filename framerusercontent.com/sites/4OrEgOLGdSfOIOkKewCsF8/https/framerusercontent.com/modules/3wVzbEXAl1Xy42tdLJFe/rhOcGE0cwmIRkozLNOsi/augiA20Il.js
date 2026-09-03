@@ -2022,7 +2022,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             variant: matchVariant("h3UYmb6_l"),
                                             width: "100%",
                                             yHfqSNGHO: "SAAS",
-                                            ZAVV92XrN: "https://www.pulseisland.club/"
+                                            ZAVV92XrN: "https://www.pulseisland.club/", GMhjAY4Gg: "https://cypherconnect-new-prod.web.app/"
                                         })
                                     })
                                 })
