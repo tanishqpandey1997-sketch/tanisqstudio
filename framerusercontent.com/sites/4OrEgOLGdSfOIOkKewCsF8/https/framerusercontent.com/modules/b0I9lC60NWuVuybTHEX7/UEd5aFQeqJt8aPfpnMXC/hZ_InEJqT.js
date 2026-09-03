@@ -61,7 +61,7 @@ const zA9JZEqrV = undefined;
 const Hc_Noyv11 = undefined;
 const rUirTmq4p = undefined;
 const yPBMmunCD = undefined;
-const T0K0p6oh0 = undefined;
+const T0K0p6oh0 = "https://dms-website-app-1997.web.app/";
 const EtuOs7Ir7 = undefined;
 const j8yRQ1QJ7 = undefined;
 const GyybUT3Ht = undefined;
@@ -226,7 +226,7 @@ const getProps = ({
         },
         rUirTmq4p: title1 ? ? props.rUirTmq4p ? ? "WEBSITE DESIGN",
         rzxKgeyAO: link4 ? ? props.rzxKgeyAO,
-        T0K0p6oh0: link2 ? ? props.T0K0p6oh0,
+        T0K0p6oh0: link2 ? ? props.T0K0p6oh0 ? ? "https://dms-website-app-1997.web.app/",
         variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "keuUWJKJx",
         Vdl6iZFII: link5 ? ? props.Vdl6iZFII,
         yPBMmunCD: cursor ? ? props.yPBMmunCD,

@@ -55,7 +55,7 @@ function addPropertyOverrides(overrides, ...variants) {
 const qFagBS4wQ = undefined;
 const c4aqhBTgq = undefined;
 const EgZWTIaq9 = undefined;
-const xpqo68wYR = undefined;
+const xpqo68wYR = "https://dms-website-app-1997.web.app/";
 const WIMWr9COC = undefined;
 const VhYSlMM_Q = undefined;
 const qjZ6AGDEr = undefined;
@@ -229,7 +229,7 @@ const getProps = ({
             src: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850",
             srcSet: "https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=512&width=1144&height=850 512w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?scale-down-to=1024&width=1144&height=850 1024w,https://framerusercontent.com/images/MRNZnm8oX4TN995oGo4jWqPreA.png?width=1144&height=850 1144w"
         },
-        xpqo68wYR: link2 ? ? props.xpqo68wYR,
+        xpqo68wYR: link2 ? ? props.xpqo68wYR ? ? "https://dms-website-app-1997.web.app/",
         YHPKbvuus: image6 ? ? props.YHPKbvuus ? ? {
             alt: "",
             pixelHeight: 850,

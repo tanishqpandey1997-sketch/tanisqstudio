@@ -52,7 +52,7 @@ function addPropertyOverrides(overrides, ...variants) {
 }
 const mUzwET1Ix = undefined;
 const LHfLHr6TF = undefined;
-const fiyb2IThv = undefined;
+const fiyb2IThv = "https://dms-website-app-1997.web.app/";
 const nWdiJ6BDt = undefined;
 const f_jVoJ8Dh = undefined;
 const ZAVV92XrN = undefined;
@@ -196,7 +196,7 @@ const getProps = ({
         },
         f_jVoJ8Dh: link4 ? ? props.f_jVoJ8Dh,
         fhhHabEMA: title4 ? ? props.fhhHabEMA ? ? "WEBSITE DESIGN",
-        fiyb2IThv: link2 ? ? props.fiyb2IThv,
+        fiyb2IThv: link2 ? ? props.fiyb2IThv ? ? "https://dms-website-app-1997.web.app/",
         GMhjAY4Gg: link6 ? ? props.GMhjAY4Gg,
         HaQQ2BJWM: image5 ? ? props.HaQQ2BJWM ? ? {
             pixelHeight: 850,
