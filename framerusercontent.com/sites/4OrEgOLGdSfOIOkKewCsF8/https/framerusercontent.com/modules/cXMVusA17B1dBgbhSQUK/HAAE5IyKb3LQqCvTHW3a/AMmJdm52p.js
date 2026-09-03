@@ -1743,7 +1743,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     GacsZQR2h: "Turning complex problems into intuitive user journeys through research, competitor analysis, information architecture, and rapid prototyping.",
                                     height: "100%",
                                     id: "Gs2_OcV0f",
-                                    jDnoOKWl8: "INTERACTION & AI EXPERIENCES",
+                                    jDnoOKWl8: "PRODUCT STRATEGY & UX",
                                     layoutId: "Gs2_OcV0f",
                                     MNNRBT6Zu: "Building fast, responsive, and accessible web applications using modern frontend architecture.",
                                     olSDdes1g: "Creating scalable application architecture, reusable component systems, API integrations, and maintainable codebases built for long-term growth.",
