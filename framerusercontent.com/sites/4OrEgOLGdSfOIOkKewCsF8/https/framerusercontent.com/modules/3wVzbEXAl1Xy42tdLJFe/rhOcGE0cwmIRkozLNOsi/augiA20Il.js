@@ -1977,10 +1977,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             }, ""),
                                             fhhHabEMA: "E-COMMERCE",
                                             HaQQ2BJWM: addImageAlt({
-                                                pixelHeight: 3072,
-                                                pixelWidth: 4096,
-                                                src: "https://framerusercontent.com/images/5EAnMiu1ulOIeMhvIos945O2uC8.webp?width=4096&height=3072",
-                                                srcSet: "https://framerusercontent.com/images/5EAnMiu1ulOIeMhvIos945O2uC8.webp?scale-down-to=512&width=4096&height=3072 512w,https://framerusercontent.com/images/5EAnMiu1ulOIeMhvIos945O2uC8.webp?scale-down-to=1024&width=4096&height=3072 1024w,https://framerusercontent.com/images/5EAnMiu1ulOIeMhvIos945O2uC8.webp?scale-down-to=2048&width=4096&height=3072 2048w,https://framerusercontent.com/images/5EAnMiu1ulOIeMhvIos945O2uC8.webp?width=4096&height=3072 4096w"
+                                                pixelHeight: 1086,
+                                                pixelWidth: 1448,
+                                                src: "/aiagencymock.png",
+                                                srcSet: "/aiagencymock.png 1448w"
                                             }, ""),
                                             height: "100%",
                                             id: "guckV7IwS",
