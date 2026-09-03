@@ -1736,7 +1736,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                 scopeId: "AMmJdm52p",
                                 children: /*#__PURE__*/ _jsx(Services, {
                                     AR9mLYLH4: "RESEARCH & PRODUCT THINKING",
-                                    AsnNa9tAB: "SYSTEM & ARCHITECTURE",
+                                    AsnNa9tAB: "INTERACTION & AI EXPERIENCES",
                                     b4DMSc_e7: "Designing thoughtful user experiences, wireframes, design systems, and interfaces that balance business goals.",
                                     Er9EcFAWa: "var(--token-bedfb557-a1ae-48fb-a49c-99449e810c34, rgb(66, 66, 66))",
                                     ezvbCDT2Z: "003",

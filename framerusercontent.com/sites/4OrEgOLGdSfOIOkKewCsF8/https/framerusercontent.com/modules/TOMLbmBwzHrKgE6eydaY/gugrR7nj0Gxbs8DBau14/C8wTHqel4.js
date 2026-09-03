@@ -59,7 +59,7 @@ const ezvbCDT2Z = undefined;
 const jDnoOKWl8 = "INTERACTION & AI EXPERIENCES";
 const GacsZQR2h = undefined;
 const wpbwRm9KM = undefined;
-const AsnNa9tAB = undefined;
+const AsnNa9tAB = "INTERACTION & AI EXPERIENCES";
 const olSDdes1g = undefined;
 const transition1 = {
     bounce: .2,
@@ -138,7 +138,7 @@ const getProps = ({
 }) => {
     return { ...props,
         AR9mLYLH4: title2 ? ? props.AR9mLYLH4 ? ? "FRONTEND DEVELOPMENT",
-        AsnNa9tAB: title4 ? ? props.AsnNa9tAB ? ? "SYSTEM & ARCHITECTURE",
+        AsnNa9tAB: title4 ? ? props.AsnNa9tAB ? ? "INTERACTION & AI EXPERIENCES",
         b4DMSc_e7: description1 ? ? props.b4DMSc_e7 ? ? "Building reliable, scalable applications from idea to production. Focused on performance, structure, and long-term maintainability.",
         Er9EcFAWa: secondary ? ? props.Er9EcFAWa ? ? "var(--token-bedfb557-a1ae-48fb-a49c-99449e810c34, rgb(66, 66, 66))",
         ezvbCDT2Z: index3 ? ? props.ezvbCDT2Z ? ? "003",
@@ -778,7 +778,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             style: {
                                                 "--framer-text-color": "var(--extracted-r6o4lv, var(--variable-reference-OVOLke5Bu-C8wTHqel4))"
                                             },
-                                            children: "SYSTEM & ARCHITECTURE"
+                                            children: "INTERACTION & AI EXPERIENCES"
                                         })
                                     }),
                                     className: "framer-zokap0",
@@ -1008,7 +1008,7 @@ addPropertyControls(FramerC8wTHqel4, {
         type: ControlType.ChangeHandler
     },
     AsnNa9tAB: {
-        defaultValue: "SYSTEM & ARCHITECTURE",
+        defaultValue: "INTERACTION & AI EXPERIENCES",
         title: "Title 4",
         type: ControlType.String
     },
