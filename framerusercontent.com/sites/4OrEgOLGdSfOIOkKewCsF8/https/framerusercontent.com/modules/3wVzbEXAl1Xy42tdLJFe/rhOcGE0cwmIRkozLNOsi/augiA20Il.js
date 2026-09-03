@@ -2003,7 +2003,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 src: "https://framerusercontent.com/images/PGnSwTcCSQ9RHmEb24fuwGrQgI.webp?width=4096&height=3072",
                                                 srcSet: "https://framerusercontent.com/images/PGnSwTcCSQ9RHmEb24fuwGrQgI.webp?scale-down-to=512&width=4096&height=3072 512w,https://framerusercontent.com/images/PGnSwTcCSQ9RHmEb24fuwGrQgI.webp?scale-down-to=1024&width=4096&height=3072 1024w,https://framerusercontent.com/images/PGnSwTcCSQ9RHmEb24fuwGrQgI.webp?scale-down-to=2048&width=4096&height=3072 2048w,https://framerusercontent.com/images/PGnSwTcCSQ9RHmEb24fuwGrQgI.webp?width=4096&height=3072 4096w"
                                             }, ""),
-                                            pX4YVkI63: "SPORTS",
+                                            pX4YVkI63: "EDTECH",
                                             SeAgW_Svg: addImageAlt({
                                                 pixelHeight: 3240,
                                                 pixelWidth: 5760,
