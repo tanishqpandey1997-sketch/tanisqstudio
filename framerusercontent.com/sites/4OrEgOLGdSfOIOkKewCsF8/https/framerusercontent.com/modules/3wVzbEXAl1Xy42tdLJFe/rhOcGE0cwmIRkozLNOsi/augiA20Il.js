@@ -1989,7 +1989,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             KX7KRKmIM: addImageAlt({
                                                 pixelHeight: 2160,
                                                 pixelWidth: 3840,
-                                                src: "https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?width=3840&height=2160",
+                                                src: "/edtech.png",
                                                 srcSet: "https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=512&width=3840&height=2160 512w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=1024&width=3840&height=2160 1024w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=2048&width=3840&height=2160 2048w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?width=3840&height=2160 3840w"
                                             }, ""),
                                             layoutId: "guckV7IwS",
