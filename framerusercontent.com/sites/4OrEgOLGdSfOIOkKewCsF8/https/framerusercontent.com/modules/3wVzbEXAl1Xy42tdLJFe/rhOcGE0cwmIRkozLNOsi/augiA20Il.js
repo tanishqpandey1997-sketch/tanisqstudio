@@ -1972,7 +1972,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             e6r1XTL03: addImageAlt({
                                                 pixelHeight: 2160,
                                                 pixelWidth: 3840,
-                                                src: "https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?width=3840&height=2160",
+                                                src: "/cyphermock.png",
                                                 srcSet: "https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=512&width=3840&height=2160 512w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=1024&width=3840&height=2160 1024w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=2048&width=3840&height=2160 2048w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?width=3840&height=2160 3840w"
                                             }, ""),
                                             fhhHabEMA: "E-COMMERCE",
