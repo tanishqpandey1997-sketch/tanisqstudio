@@ -1636,7 +1636,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         style: {
                                             "--framer-text-alignment": "left"
                                         },
-                                        children: "Every project begins with understanding the problem. I combine product thinking, interface design, and engineering to create experiences that are intuitive, performant, and built to last."
+                                        children: "Every project starts with trying to understand what people are actually trying to do. I ask questions, find the friction, and look beyond the interface to see what the product really needs. Then I turn those insights into simple, thoughtful experiences that feel right to use."
                                     })
                                 }),
                                 className: "framer-33ewd8",
@@ -1671,7 +1671,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "Every project begins with understanding the problem. I combine product thinking, interface design, and engineering to create experiences that are intuitive, performant, and built to last."
+                                                children: "Every project starts with trying to understand what people are actually trying to do. I ask questions, find the friction, and look beyond the interface to see what the product really needs. Then I turn those insights into simple, thoughtful experiences that feel right to use."
                                             })
                                         })
                                     },
@@ -1685,7 +1685,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "Every project begins with understanding the problem. I combine product thinking, interface design, and engineering to create experiences that are intuitive, performant, and built to last."
+                                                children: "Every project starts with trying to understand what people are actually trying to do. I ask questions, find the friction, and look beyond the interface to see what the product really needs. Then I turn those insights into simple, thoughtful experiences that feel right to use."
                                             })
                                         })
                                     },
@@ -1699,7 +1699,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "Every project begins with understanding the problem. I combine product thinking, interface design, and engineering to create experiences that are intuitive, performant, and built to last."
+                                                children: "Every project starts with trying to understand what people are actually trying to do. I ask questions, find the friction, and look beyond the interface to see what the product really needs. Then I turn those insights into simple, thoughtful experiences that feel right to use."
                                             })
                                         })
                                     }
