@@ -1984,7 +1984,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             }, ""),
                                             height: "100%",
                                             id: "guckV7IwS",
-                                            IszbDCIOc: "PRODUCTIVITY",
+                                            IszbDCIOc: "AI SYSTEMS",
                                             JhRen4I_0: "FINANCE",
                                             KX7KRKmIM: addImageAlt({
                                                 pixelHeight: 2160,
