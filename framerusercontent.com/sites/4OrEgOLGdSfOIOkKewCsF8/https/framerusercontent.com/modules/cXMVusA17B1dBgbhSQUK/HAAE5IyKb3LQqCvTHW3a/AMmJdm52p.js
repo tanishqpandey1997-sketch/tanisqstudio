@@ -1541,7 +1541,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         style: {
                                             "--framer-text-alignment": "left"
                                         },
-                                        children: "I PARTNER WITH FOUNDERS TO DESIGN, BUILD, AND SCALE DIGITAL PRODUCTS."
+                                        children: "I DESIGN AROUND PEOPLE, NOT JUST SCREENS, TO MAKE TECHNOLOGY FEEL NATURAL."
                                     })
                                 }),
                                 className: "framer-1gtjee9",
@@ -1576,7 +1576,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "I PARTNER WITH FOUNDERS TO DESIGN, BUILD, AND SCALE DIGITAL PRODUCTS."
+                                                children: "I DESIGN AROUND PEOPLE, NOT JUST SCREENS, TO MAKE TECHNOLOGY FEEL NATURAL."
                                             })
                                         })
                                     },
@@ -1590,7 +1590,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "I PARTNER WITH FOUNDERS TO DESIGN, BUILD, AND SCALE DIGITAL PRODUCTS."
+                                                children: "I DESIGN AROUND PEOPLE, NOT JUST SCREENS, TO MAKE TECHNOLOGY FEEL NATURAL."
                                             })
                                         })
                                     },
@@ -1604,7 +1604,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                     "--framer-text-alignment": "left",
                                                     "--framer-text-color": "var(--extracted-a0htzi, var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158)))"
                                                 },
-                                                children: "I PARTNER WITH FOUNDERS TO DESIGN, BUILD, AND SCALE DIGITAL PRODUCTS."
+                                                children: "I DESIGN AROUND PEOPLE, NOT JUST SCREENS, TO MAKE TECHNOLOGY FEEL NATURAL."
                                             })
                                         })
                                     }
