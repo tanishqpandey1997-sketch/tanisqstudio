@@ -1745,7 +1745,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     id: "Gs2_OcV0f",
                                     jDnoOKWl8: "PRODUCT STRATEGY & UX",
                                     layoutId: "Gs2_OcV0f",
-                                    MNNRBT6Zu: "Building fast, responsive, and accessible web applications using modern frontend architecture.",
+                                    MNNRBT6Zu: "Finding the real problem, understanding users, and turning insight into meaningful product decisions.",
                                     olSDdes1g: "Creating scalable application architecture, reusable component systems, API integrations, and maintainable codebases built for long-term growth.",
                                     OVOLke5Bu: "var(--token-6c52689b-2844-43ed-ba14-1d9e767fc7ae, rgb(36, 36, 36))",
                                     rcicVLniJ: "001",
