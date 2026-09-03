@@ -2006,10 +2006,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             fiyb2IThv: "https://dms-website-app-1997.web.app/",
                                             pX4YVkI63: "EDTECH",
                                             SeAgW_Svg: addImageAlt({
-                                                pixelHeight: 3240,
-                                                pixelWidth: 5760,
-                                                src: "https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?width=5760&height=3240",
-                                                srcSet: "https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?scale-down-to=512&width=5760&height=3240 512w,https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?scale-down-to=1024&width=5760&height=3240 1024w,https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?scale-down-to=2048&width=5760&height=3240 2048w,https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?scale-down-to=4096&width=5760&height=3240 4096w,https://framerusercontent.com/images/JAOWCN3UczWW2GoHRW1ahSW2NsY.jpg?width=5760&height=3240 5760w"
+                                                pixelHeight: 3000,
+                                                pixelWidth: 4000,
+                                                src: "/cyphermock.png",
+                                                srcSet: "/cyphermock.png 4000w"
                                             }, ""),
                                             style: {
                                                 width: "100%"
