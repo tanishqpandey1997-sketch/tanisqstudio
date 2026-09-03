@@ -2017,7 +2017,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             UHHeeF5QI: addImageAlt({
                                                 pixelHeight: 4500,
                                                 pixelWidth: 6e3,
-                                                src: "https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?width=6000&height=4500",
+                                                src: "/aiagencymock.png",
                                                 srcSet: "https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?scale-down-to=512&width=6000&height=4500 512w,https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?scale-down-to=1024&width=6000&height=4500 1024w,https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?scale-down-to=2048&width=6000&height=4500 2048w,https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?scale-down-to=4096&width=6000&height=4500 4096w,https://framerusercontent.com/images/UbFctpOpIXsg78nbVuz7cQKOj4.webp?width=6000&height=4500 6000w"
                                             }, ""),
                                             variant: matchVariant("h3UYmb6_l"),
