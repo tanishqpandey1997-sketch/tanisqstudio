@@ -1740,7 +1740,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     b4DMSc_e7: "Turning real problems into useful products through product thinking, UX, interaction design, and visual systems.",
                                     Er9EcFAWa: "var(--token-bedfb557-a1ae-48fb-a49c-99449e810c34, rgb(66, 66, 66))",
                                     ezvbCDT2Z: "003",
-                                    GacsZQR2h: "Turning complex problems into intuitive user journeys through research, competitor analysis, information architecture, and rapid prototyping.",
+                                    GacsZQR2h: "Turning real user needs into clear product directions through research, user flows, information architecture, and rapid prototyping.",
                                     height: "100%",
                                     id: "Gs2_OcV0f",
                                     jDnoOKWl8: "PRODUCT STRATEGY & UX",
