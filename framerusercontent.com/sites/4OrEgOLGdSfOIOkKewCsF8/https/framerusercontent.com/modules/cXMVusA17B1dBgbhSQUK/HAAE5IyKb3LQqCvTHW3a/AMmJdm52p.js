@@ -1746,7 +1746,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     jDnoOKWl8: "PRODUCT STRATEGY & UX",
                                     layoutId: "Gs2_OcV0f",
                                     MNNRBT6Zu: "Finding the real problem, understanding users, and turning insight into meaningful product decisions.",
-                                    olSDdes1g: "Creating scalable application architecture, reusable component systems, API integrations, and maintainable codebases built for long-term growth.",
+                                    olSDdes1g: "Designing intuitive flows, prototypes, and emerging AI interactions with clarity, feedback, and human control.",
                                     OVOLke5Bu: "var(--token-6c52689b-2844-43ed-ba14-1d9e767fc7ae, rgb(36, 36, 36))",
                                     rcicVLniJ: "001",
                                     style: {

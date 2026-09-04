@@ -60,7 +60,7 @@ const jDnoOKWl8 = "PRODUCT STRATEGY & UX";
 const GacsZQR2h = undefined;
 const wpbwRm9KM = undefined;
 const AsnNa9tAB = "INTERACTION & AI EXPERIENCES";
-const olSDdes1g = undefined;
+const olSDdes1g = "Designing intuitive flows, prototypes, and emerging AI interactions with clarity, feedback, and human control.";
 const transition1 = {
     bounce: .2,
     delay: 0,
