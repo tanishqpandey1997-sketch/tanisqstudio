@@ -1423,7 +1423,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             maxWidth: "100%",
                                             width: "100%"
                                         },
-                                        uRY_pb6U2: "I AM A DIGITAL POLYMATH: A CONSTANTLY EVOLVING BEING DRIVEN BY A PASSION FOR LIFELONG LEARNING AND THE DESIRE TO LEAVE A LASTING IMPACT.",
+                                        uRY_pb6U2: "I’M A PRODUCT DESIGNER EXPLORING HOW PEOPLE AND TECHNOLOGY CAN WORK BETTER TOGETHER. I’M INTERESTED IN SIMPLE INTERACTIONS, THOUGHTFUL SYSTEMS, AND NEW WAYS TO MAKE DIGITAL EXPERIENCES FEEL MORE NATURAL AND HUMAN.",
                                         variant: matchVariant("F5Z5Wy32p"),
                                         width: "100%",
                                         ...addPropertyOverrides({

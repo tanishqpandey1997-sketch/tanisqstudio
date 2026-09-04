@@ -792,11 +792,11 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         breakpoint: baseVariant,
                                         overrides: {
                                             dCyvWi7OD: {
-                                                uRY_pb6U2: "                I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
+                                                uRY_pb6U2: "I’M A PRODUCT DESIGNER EXPLORING HOW PEOPLE AND TECHNOLOGY CAN WORK BETTER TOGETHER. I’M INTERESTED IN SIMPLE INTERACTIONS, THOUGHTFUL SYSTEMS, AND NEW WAYS TO MAKE DIGITAL EXPERIENCES FEEL MORE NATURAL AND HUMAN.",
                                                 variant: matchVariant("P9mJ0Yace")
                                             },
                                             lRuGrkaGM: {
-                                                uRY_pb6U2: "                     I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
+                                                uRY_pb6U2: "I’M A PRODUCT DESIGNER EXPLORING HOW PEOPLE AND TECHNOLOGY CAN WORK BETTER TOGETHER. I’M INTERESTED IN SIMPLE INTERACTIONS, THOUGHTFUL SYSTEMS, AND NEW WAYS TO MAKE DIGITAL EXPERIENCES FEEL MORE NATURAL AND HUMAN.",
                                                 variant: matchVariant("qunrjHryV")
                                             }
                                         },
@@ -810,7 +810,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             style: {
                                                 width: "100%"
                                             },
-                                            uRY_pb6U2: "                         I DESIGN DIGITAL PRODUCTS THAT FEEL SIMPLE, USEFUL, AND HUMAN. I TURN COMPLEX PROBLEMS INTO CLEAR EXPERIENCES, WITH A LOT OF ATTENTION TO HOW PEOPLE ACTUALLY THINK, USE, AND EXPERIENCE PRODUCTS.\n",
+                                            uRY_pb6U2: "I’M A PRODUCT DESIGNER EXPLORING HOW PEOPLE AND TECHNOLOGY CAN WORK BETTER TOGETHER. I’M INTERESTED IN SIMPLE INTERACTIONS, THOUGHTFUL SYSTEMS, AND NEW WAYS TO MAKE DIGITAL EXPERIENCES FEEL MORE NATURAL AND HUMAN.",
                                             variant: matchVariant("F5Z5Wy32p"),
                                             width: "100%"
                                         })
