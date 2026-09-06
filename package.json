@@ -1,12 +1,12 @@
 {
-  "name": "tanisqfolio",
+  "name": "tanisqstudio",
   "version": "1.0.0",
   "description": "Portfolio Website",
   "main": "index.html",
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "serve": "node server.js"
+    "build": "echo \"Static build ready\""
   },
   "keywords": [],
   "author": "",
