@@ -277,7 +277,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     withExternalLayout: true
                                 })
                             }), /*#__PURE__*/ _jsx(Link, {
-                                href: "https://www.producthunt.com/products/pulse-island",
+                                href: "https://www.linkedin.com/in/tanisq-pandey/",
                                 motionChild: true,
                                 nodeId: "VxytP9ByE",
                                 openInNewTab: true,
