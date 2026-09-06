@@ -1993,7 +1993,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 srcSet: "https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=512&width=3840&height=2160 512w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=1024&width=3840&height=2160 1024w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=2048&width=3840&height=2160 2048w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?width=3840&height=2160 3840w"
                                             }, ""),
                                             layoutId: "guckV7IwS",
-                                            LHfLHr6TF: "https://varad-infra.in/",
+                                            LHfLHr6TF: "https://settlerealestate.vercel.app/",
                                             mUzwET1Ix: "aokple",
                                             nN3KCdL8v: "REAL ESTATE",
                                             nWdiJ6BDt: "https://www.producthunt.com/products/klutter-ai",
