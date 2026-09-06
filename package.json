@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Portfolio Website",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js"
+    "dev": "node server.js"
   }
 }
