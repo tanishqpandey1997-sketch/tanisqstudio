@@ -9,7 +9,7 @@ let audio = null;
 function getAudio() {
     if (typeof window === "undefined") return null;
     if (!audio) {
-        audio = new window.Audio("https://toxic-crimson-2nntimt7.edgeone.dev/mixkit-alien-technology-button-3118%20(1).mp3");
+        audio = new window.Audio("/hover.mp3");
         audio.preload = "auto";
         audio.volume = .4;
     }
