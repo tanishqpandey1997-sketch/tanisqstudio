@@ -29,15 +29,19 @@
 <body>
 <div id="app"></div>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 <script type="module">
     let THREE = window.THREE;
     if (!THREE) {
         try {
-            THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-        } catch (e) {
             THREE = await import('/cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+        } catch (e) {
+            try {
+                THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+            } catch (e2) {}
         }
+    }
+    if (!THREE) {
+        THREE = window.THREE;
     }
 
     function createRoomEnvironment() {
@@ -214,7 +218,20 @@
     el.addEventListener('pointercancel', up);
     el.addEventListener('pointerleave', up);
 
+    let isVisible = true;
+    if (typeof IntersectionObserver !== 'undefined') {
+        const observer = new IntersectionObserver((entries) => {
+            isVisible = entries[0].isIntersecting;
+        }, { threshold: 0.01 });
+        observer.observe(document.documentElement);
+    }
+
+    document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+    });
+
     renderer.setAnimationLoop(() => {
+        if (!isVisible) return;
         if (!dragging) {
             if (Math.abs(vel) > AUTO) {
                 group.rotation.y += vel;

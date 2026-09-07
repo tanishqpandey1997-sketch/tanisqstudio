@@ -1970,10 +1970,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         },
                                         children: /*#__PURE__*/ _jsx(Work, {
                                             e6r1XTL03: addImageAlt({
-                                                pixelHeight: 2160,
-                                                pixelWidth: 3840,
-                                                src: "/cyphermock.png",
-                                                srcSet: "https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=512&width=3840&height=2160 512w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=1024&width=3840&height=2160 1024w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?scale-down-to=2048&width=3840&height=2160 2048w,https://framerusercontent.com/images/5MHujm7e3cIwbqMYS5q6UbQxeuo.png?width=3840&height=2160 3840w"
+                                                pixelHeight: 992,
+                                                pixelWidth: 1586,
+                                                src: "/realestate.png",
+                                                srcSet: "/realestate.png 1586w"
                                             }, ""),
                                             fhhHabEMA: "E-COMMERCE",
                                             HaQQ2BJWM: addImageAlt({
@@ -1987,10 +1987,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             IszbDCIOc: "AI SYSTEMS",
                                             JhRen4I_0: "FINANCE",
                                             KX7KRKmIM: addImageAlt({
-                                                pixelHeight: 2160,
-                                                pixelWidth: 3840,
+                                                pixelHeight: 900,
+                                                pixelWidth: 1200,
                                                 src: "/edtech.png",
-                                                srcSet: "https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=512&width=3840&height=2160 512w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=1024&width=3840&height=2160 1024w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?scale-down-to=2048&width=3840&height=2160 2048w,https://framerusercontent.com/images/R8BHBsZge82oQgNJdbhrYbb40E.png?width=3840&height=2160 3840w"
+                                                srcSet: "/edtech.png 1200w"
                                             }, ""),
                                             layoutId: "guckV7IwS",
                                             LHfLHr6TF: "https://settlerealestate.vercel.app/",

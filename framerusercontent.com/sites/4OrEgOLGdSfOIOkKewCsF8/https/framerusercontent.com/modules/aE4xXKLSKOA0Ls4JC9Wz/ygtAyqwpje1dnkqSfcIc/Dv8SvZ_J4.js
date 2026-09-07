@@ -268,9 +268,9 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         rendersWithMotion: true,
                                         scopeId: "Dv8SvZ_J4",
                                         children: /*#__PURE__*/ _jsx(Ticker, {
-                                            BqHbV3WBQ: "Aayush has a keen eye for detail and is passionate about programming. Two things that are a must for a developer! I have no doubt he can rise to any challenge.\n",
+                                            BqHbV3WBQ: "Tanisq has a keen eye for detail and is passionate about programming. Two things that are a must for a developer! I have no doubt he can rise to any challenge.\n",
                                             EBuBRAfwk: "SUPER RELIABLE AND DETAIL-ORIENTED. YOU CAN TRUST HIM TO TAKE OWNERSHIP AND SHIP HIGH-QUALITY WORK WITHOUT HAND-HOLDING.",
-                                            gcTSIhAuY: "Aayush is a UI/UX wizard! We reached out to him through someone for the very first time to execute a landing page for a 2 month long contest. He understood the assignment and designed + coded everything end-to-end within 10 days with his fire creativity and technical chops. The sleek design and the interactive features were very impressive.\n\nQuick, efficient, and a burst of energy with buzzing ideas to work with, Aayush is the go-to for anyone needing standout & quality work. Highly recommend!",
+                                            gcTSIhAuY: "Tanisq is a UI/UX wizard! We reached out to him through someone for the very first time to execute a landing page for a 2 month long contest. He understood the assignment and designed + coded everything end-to-end within 10 days with his fire creativity and technical chops. The sleek design and the interactive features were very impressive.\n\nQuick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq is the go-to for anyone needing standout & quality work. Highly recommend!",
                                             height: "100%",
                                             id: "n7PdsjgCN",
                                             iuSp9s7m9: "EMMA RICHARDS",
