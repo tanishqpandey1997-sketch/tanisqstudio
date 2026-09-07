@@ -123,7 +123,7 @@ const Overlay = ({
 };
 const breakpointRules = {
     i6_NrKJXO: [".framer-tGC2U .framer-9qozdr, .framer-tGC2U .framer-1k7lg48-container { width: 810px; }", ".framer-tGC2U .framer-pffrvf-container { aspect-ratio: unset; }"],
-    tXsokKLMx: [".framer-tGC2U .framer-9qozdr { height: 38px; width: 390px; }", ".framer-tGC2U .framer-gl8dny { gap: 10px; }", ".framer-tGC2U .framer-1ectgj2 { padding: 3px 6px 3px 6px; }", ".framer-tGC2U .framer-1k7lg48-container { width: 390px; }", ".framer-tGC2U.framer-1k90ogk { z-index: 10; }", ".framer-tGC2U.framer-7yrvxx-container { bottom: 0px; height: unset; left: 0px; right: 0px; top: 0px; width: unset; z-index: 10; }", ".framer-tGC2U .framer-pffrvf-container { aspect-ratio: unset; max-height: unset; }"]
+    tXsokKLMx: [".framer-tGC2U .framer-9qozdr { height: 34px; width: 100%; max-width: 100vw; padding: 0 6px; box-sizing: border-box; }", ".framer-tGC2U .framer-gl8dny { gap: 5px; max-width: 100%; }", ".framer-tGC2U .framer-1ectgj2 { padding: 2px 5px; flex-shrink: 0; }", ".framer-tGC2U .framer-1k7lg48-container { width: 390px; }", ".framer-tGC2U.framer-1k90ogk { z-index: 10; }", ".framer-tGC2U.framer-7yrvxx-container { bottom: 0px; height: unset; left: 0px; right: 0px; top: 0px; width: unset; z-index: 10; }", ".framer-tGC2U .framer-pffrvf-container { aspect-ratio: unset; max-height: unset; }"]
 };
 const breakpointKeys = Object.keys(breakpointRules);
 const selectors = {
@@ -243,9 +243,9 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 style: {
                                                     "--font-selector": "R0Y7R2Vpc3QgTW9uby01MDA=",
                                                     "--framer-font-family": '"Geist Mono", monospace',
-                                                    "--framer-font-size": "11px",
+                                                    "--framer-font-size": "8px",
                                                     "--framer-font-weight": "500",
-                                                    "--framer-letter-spacing": "0.2px",
+                                                    "--framer-letter-spacing": "-0.15px",
                                                     "--framer-text-color": "rgb(255, 255, 255)",
                                                     "--framer-text-transform": "uppercase"
                                                 },
