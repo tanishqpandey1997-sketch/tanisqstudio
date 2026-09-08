@@ -276,7 +276,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             iuSp9s7m9: "EMMA RICHARDS",
                                             jNmnRSTwy: "STARTUP FOUNDER",
                                             layoutId: "n7PdsjgCN",
-                                            m4gIQJVIp: "DREW MCGIBBON",
+                                            m4gIQJVIp: "VIRAT BISHT",
                                             mLek7zOQN: "HEAD - MARKETING",
                                             n9Z5u7mN6: "DIVYA MAKHIJANI",
                                             NzZzxJDpj: "var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158))",
