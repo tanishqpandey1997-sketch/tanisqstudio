@@ -276,17 +276,15 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     verticalAlignment: "top",
                                     withExternalLayout: true
                                 })
-                            }), /*#__PURE__*/ _jsx(Link, {
-                                href: "https://www.linkedin.com/in/tanisq-pandey/",
-                                motionChild: true,
-                                nodeId: "VxytP9ByE",
-                                openInNewTab: true,
-                                scopeId: "eXLn7mkjm",
-                                children: /*#__PURE__*/ _jsx(motion.a, {
-                                    className: "framer-1ectgj2 framer-1h02jq",
-                                    "data-border": true,
-                                    "data-framer-name": "Check Product Hunt",
-                                    "data-reset": "button",
+                            }), /*#__PURE__*/ _jsx(motion.a, {
+                                href: "/tanisqCV.pdf",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                onTap: () => window.open("/tanisqCV.pdf", "_blank"),
+                                className: "framer-1ectgj2 framer-1h02jq",
+                                "data-border": true,
+                                "data-framer-name": "Check Product Hunt",
+                                "data-reset": "button",
                                     children: /*#__PURE__*/ _jsx(PropertyOverrides, {
                                         breakpoint: baseVariant,
                                         overrides: {
@@ -331,8 +329,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             withExternalLayout: true
                                         })
                                     })
-                                })
-                            })]
+                                })]
                         })
                     }), /*#__PURE__*/ _jsx(Overlay, {
                         dismissWithEsc: true,

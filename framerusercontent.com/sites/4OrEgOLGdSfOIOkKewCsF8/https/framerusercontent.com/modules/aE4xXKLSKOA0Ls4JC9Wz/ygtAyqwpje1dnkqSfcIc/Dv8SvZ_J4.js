@@ -273,12 +273,12 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             gcTSIhAuY: "Tanisq is a UI/UX wizard! We reached out to him through someone for the very first time to execute a landing page for a 2 month long contest. He understood the assignment and designed + coded everything end-to-end within 10 days with his fire creativity and technical chops. The sleek design and the interactive features were very impressive.\n\nQuick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq is the go-to for anyone needing standout & quality work. Highly recommend!",
                                             height: "100%",
                                             id: "n7PdsjgCN",
-                                            iuSp9s7m9: "EMMA RICHARDS",
-                                            jNmnRSTwy: "STARTUP FOUNDER",
+                                            iuSp9s7m9: "ISHAAN",
+                                            jNmnRSTwy: "FROMDRIVE",
                                             layoutId: "n7PdsjgCN",
-                                            m4gIQJVIp: "DREW MCGIBBON",
-                                            mLek7zOQN: "HEAD - MARKETING",
-                                            n9Z5u7mN6: "DIVYA MAKHIJANI",
+                                            m4gIQJVIp: "RUSHIT",
+                                            mLek7zOQN: "WEB DEVELOPER",
+                                            n9Z5u7mN6: "RAHUL SHAHI",
                                             NzZzxJDpj: "var(--token-0476634d-d018-44af-ab6c-08b29120481d, rgb(158, 158, 158))",
                                             style: {
                                                 height: "100%",
@@ -287,7 +287,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             },
                                             variant: matchVariant("xQaRokbXy"),
                                             width: "100%",
-                                            Yp_Lb9Myd: "TECH LEAD",
+                                            Yp_Lb9Myd: "VIBRANT MEDIA",
                                             ...addPropertyOverrides({
                                                 uve4f4P8i: {
                                                     variant: matchVariant("iUkxA3hz3")

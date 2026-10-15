@@ -23,10 +23,12 @@ const MIME_TYPES = {
   ".ttf": "font/ttf",
   ".mp3": "audio/mpeg",
   ".mp4": "video/mp4",
-  ".webm": "video/webm"
+  ".webm": "video/webm",
+  ".pdf": "application/pdf"
 };
 
 function handleRequest(req, res) {
+  console.log(`${new Date().toISOString()} [${req.method}] ${req.url}`);
   const parsedUrl = new URL(req.url, "http://" + (req.headers.host || "localhost"));
   let pathname = decodeURIComponent(parsedUrl.pathname);
 
@@ -57,6 +59,10 @@ function handleRequest(req, res) {
 
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
+
+    if (ext === ".pdf") {
+      res.setHeader("Content-Disposition", `inline; filename="${path.basename(filePath)}"`);
+    }
 
     // Handle Range requests for audio / video
     const range = req.headers.range;
