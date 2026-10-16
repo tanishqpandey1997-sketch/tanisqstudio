@@ -4,6 +4,10 @@
 <html lang="en" data-redirect-timezone="1" dir="ltr">
 
 <head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="Framer a520bf1">
@@ -516,6 +520,11 @@
         }
         [data-framer-appear-id] {
             animation: framerAppearFallback 0.001s forwards 0.4s;
+        }
+    </style>
+    <style>
+        .framer-YbUQS ul {
+            opacity: 1 !important;
         }
     </style>
     <style data-framer-breakpoint-css>
@@ -9921,7 +9930,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/framer.DIOYHPzw.mjs">
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/shared-lib.DJDD42Fs.mjs">
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/oLZImXA_dkkkiacex51G27FlwZgpQI5Msg2HXvWLgfY.B__cT9TA.mjs">
-    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/script_main.BM_-cmCb.mjs"></script>
+    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/script_main.BM_-cmCb.mjs?v=2"></script>
     <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
         <svg id="146875479" display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18px" id="j3DQ2Myaf" transform="translate(3 3)" width="18px"/><path d="M 0 0 L 18 0" fill="transparent" height="1px" id="gKxvG0UIA" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 12)" width="18px"/><path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" fill="transparent" height="18px" id="ElC_cWAtq" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 3)" width="18px"/><path d="M 7.5 9 C 7.5 15 3.75 18 3.75 18 C 3.75 18 0 15 0 9 C 0 3 3.75 0 3.75 0 C 3.75 0 7.5 3 7.5 9 Z" fill="transparent" height="18px" id="pQ0siYsh5" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3)" width="7.5px"/></svg>
     </div>
@@ -10041,10 +10050,15 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                 if (!e.target || !e.target.closest) return;
                 const cvLink = e.target.closest('a[data-framer-name="Check Product Hunt"], a.framer-1ectgj2, [data-framer-name="Check Product Hunt"]');
                 if (cvLink) {
-                    e.preventDefault();
-                    e.stopPropagation();
                     const pdfUrl = new URL('tanisqCV.pdf', window.location.href).href;
-                    window.open(pdfUrl, '_blank');
+                    if (cvLink.tagName === 'A') {
+                        cvLink.href = pdfUrl;
+                        cvLink.target = '_blank';
+                        cvLink.rel = 'noopener noreferrer';
+                    } else {
+                        e.preventDefault();
+                        window.location.href = pdfUrl;
+                    }
                 }
             }, true);
 
