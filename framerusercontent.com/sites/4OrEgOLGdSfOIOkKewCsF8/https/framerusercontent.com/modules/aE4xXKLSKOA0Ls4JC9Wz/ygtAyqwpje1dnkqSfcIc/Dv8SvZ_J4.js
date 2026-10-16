@@ -55,7 +55,7 @@ const variantClassNames = {
 
 function addPropertyOverrides(overrides, ...variants) {
     const nextOverrides = {};
-    variants ? .forEach(variant => variant && Object.assign(nextOverrides, overrides[variant]));
+    variants ?.forEach(variant => variant && Object.assign(nextOverrides, overrides[variant]));
     return nextOverrides;
 }
 const transition1 = {
@@ -75,7 +75,7 @@ const Transition = ({
     children
 }) => {
     const config = React.useContext(MotionConfigContext);
-    const transition = value ? ? config.transition;
+    const transition = value ?? config.transition;
     const contextValue = React.useMemo(() => ({ ...config,
         transition
     }), [JSON.stringify(transition)]);
@@ -97,7 +97,7 @@ const getProps = ({
     ...props
 }) => {
     return { ...props,
-        variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "QspuLfLe_"
+        variant: humanReadableVariantMap[props.variant] ?? props.variant ?? "QspuLfLe_"
     };
 };
 const createLayoutDependency = (props, variants) => {
@@ -106,7 +106,7 @@ const createLayoutDependency = (props, variants) => {
 };
 const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
     const fallbackRef = useRef(null);
-    const refBinding = ref ? ? fallbackRef;
+    const refBinding = ref ?? fallbackRef;
     const defaultLayoutId = React.useId();
     const {
         activeLocale,
@@ -141,7 +141,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
     const sharedStyleClassNames = [sharedStyle.className];
     const scopingClassNames = cx(serializationHash, ...sharedStyleClassNames);
     return /*#__PURE__*/ _jsx(LayoutGroup, {
-        id: layoutId ? ? defaultLayoutId,
+        id: layoutId ?? defaultLayoutId,
         children: /*#__PURE__*/ _jsx(Variants, {
             animate: variants,
             initial: false,
@@ -247,14 +247,14 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     verticalAlignment: "top",
                                     withExternalLayout: true
                                 }), /*#__PURE__*/ _jsx(ComponentViewportProvider, {
-                                    height: Math.max(0, (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - 51.2) / 1) * 1,
+                                    height: Math.max(0, (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - 51.2) / 1) * 1,
                                     width: `min(min((${componentViewport?.width||"100vw"} - 128px) * 0.68, 1440px), 464px)`,
-                                    y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + 0 + 0) + 0 + ((Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - (19.2 + Math.max(0, (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - 51.2) / 1) * 1 + 32)) / 2 + 19.2 + 32),
+                                    y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + 0 + 0) + 0 + ((Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - (19.2 + Math.max(0, (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 - 0 - 51.2) / 1) * 1 + 32)) / 2 + 19.2 + 32),
                                     ...addPropertyOverrides({
                                         uve4f4P8i: {
                                             height: 332,
                                             width: `min(min(${componentViewport?.width||"100vw"} - 40px, 1440px), 464px)`,
-                                            y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 0 + 0 + 51.2
+                                            y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 0 + 0 + 51.2
                                         },
                                         YRYhZG1dZ: {
                                             width: `min(min(min((${componentViewport?.width||"100vw"} - 64px) * 0.76, 564px), 1440px), 464px)`
@@ -304,11 +304,11 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                 children: [ /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                     height: 1,
                                     width: `calc((${componentViewport?.width||"100vw"} - 128px) * 0.68)`,
-                                    y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 0,
+                                    y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 0,
                                     ...addPropertyOverrides({
                                         uve4f4P8i: {
                                             width: `calc(${componentViewport?.width||"100vw"} - 40px)`,
-                                            y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 0
+                                            y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 0
                                         },
                                         YRYhZG1dZ: {
                                             width: `min((${componentViewport?.width||"100vw"} - 64px) * 0.76, 564px)`
@@ -340,10 +340,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     layoutId: "SRsXHiFZo",
                                     children: [ /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                         height: 18,
-                                        y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
+                                        y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
                                         ...addPropertyOverrides({
                                             uve4f4P8i: {
-                                                y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 0
+                                                y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 0
                                             }
                                         }, baseVariant, gestureVariant),
                                         children: /*#__PURE__*/ _jsx(SmartComponentScopedContainer, {
@@ -366,10 +366,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         })
                                     }), /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                         height: 18,
-                                        y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
+                                        y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
                                         ...addPropertyOverrides({
                                             uve4f4P8i: {
-                                                y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 38
+                                                y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 38
                                             }
                                         }, baseVariant, gestureVariant),
                                         children: /*#__PURE__*/ _jsx(SmartComponentScopedContainer, {
@@ -392,10 +392,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         })
                                     }), /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                         height: 18,
-                                        y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
+                                        y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
                                         ...addPropertyOverrides({
                                             uve4f4P8i: {
-                                                y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 76
+                                                y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 76
                                             }
                                         }, baseVariant, gestureVariant),
                                         children: /*#__PURE__*/ _jsx(SmartComponentScopedContainer, {
@@ -418,10 +418,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                         })
                                     }), /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                         height: 18,
-                                        y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
+                                        y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 13 + 0,
                                         ...addPropertyOverrides({
                                             uve4f4P8i: {
-                                                y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 114
+                                                y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 17 + 0 + 114
                                             }
                                         }, baseVariant, gestureVariant),
                                         children: /*#__PURE__*/ _jsx(SmartComponentScopedContainer, {
@@ -446,11 +446,11 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                 }), /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                     height: 1,
                                     width: `calc((${componentViewport?.width||"100vw"} - 128px) * 0.68)`,
-                                    y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 43,
+                                    y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 40) + 0 + 43,
                                     ...addPropertyOverrides({
                                         uve4f4P8i: {
                                             width: `calc(${componentViewport?.width||"100vw"} - 40px)`,
-                                            y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 165
+                                            y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 423.2 + 0 + 165
                                         },
                                         YRYhZG1dZ: {
                                             width: `min((${componentViewport?.width||"100vw"} - 64px) * 0.76, 564px)`
@@ -483,10 +483,10 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                 layoutId: "CEBeQrqBt",
                                 children: [ /*#__PURE__*/ _jsx(ComponentViewportProvider, {
                                     height: 40,
-                                    y: (componentViewport ? .y || 0) + 32 + ((componentViewport ? .height || 656) - 64 - (((componentViewport ? .height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ? .height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + (Math.max(0, (Math.max(0, (((componentViewport ? .height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44) + 80) + 80,
+                                    y: (componentViewport ?.y || 0) + 32 + ((componentViewport ?.height || 656) - 64 - (((componentViewport ?.height || 656) - 64) * .8 + 0) + 0 + 0) + 0 + (0 + 0 + (((componentViewport ?.height || 656) - 64) * .8 - 0 - Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1) / 1 * 0) + 0 + ((Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44 + 200 + 80)) / 2 + (Math.max(0, (Math.max(0, (((componentViewport ?.height || 656) - 64) * .8 - 0 - 0) / 1) * 1 - 0 - 324) / 1) * 1 + 44) + 80) + 80,
                                     ...addPropertyOverrides({
                                         uve4f4P8i: {
-                                            y: (componentViewport ? .y || 0) + 164 + ((componentViewport ? .height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 629.2 + 0 + 160
+                                            y: (componentViewport ?.y || 0) + 164 + ((componentViewport ?.height || 854.5) - 184 - 829.2 + 0 + 0) + 0 + 0 + 0 + 629.2 + 0 + 160
                                         }
                                     }, baseVariant, gestureVariant),
                                     children: /*#__PURE__*/ _jsx(SmartComponentScopedContainer, {
@@ -560,12 +560,12 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                             fit: "fill",
                             intrinsicHeight: 1636,
                             intrinsicWidth: 3024,
-                            loading: getLoadingLazyAtYPosition((componentViewport ? .y || 0) + 0),
+                            loading: getLoadingLazyAtYPosition((componentViewport ?.y || 0) + 0),
                             pixelHeight: 1636,
                             pixelWidth: 3024,
                             positionX: "center",
                             positionY: "top",
-                            sizes: componentViewport ? .width || "100vw",
+                            sizes: componentViewport ?.width || "100vw",
                             src: "https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?width=3024&height=1636",
                             srcSet: "https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=512&width=3024&height=1636 512w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=1024&width=3024&height=1636 1024w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=2048&width=3024&height=1636 2048w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?width=3024&height=1636 3024w"
                         },
@@ -580,12 +580,12 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     fit: "fill",
                                     intrinsicHeight: 1636,
                                     intrinsicWidth: 3024,
-                                    loading: getLoadingLazyAtYPosition((componentViewport ? .y || 0) + 0),
+                                    loading: getLoadingLazyAtYPosition((componentViewport ?.y || 0) + 0),
                                     pixelHeight: 1636,
                                     pixelWidth: 3024,
                                     positionX: "left",
                                     positionY: "top",
-                                    sizes: componentViewport ? .width || "100vw",
+                                    sizes: componentViewport ?.width || "100vw",
                                     src: "https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?width=3024&height=1636",
                                     srcSet: "https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=512&width=3024&height=1636 512w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=1024&width=3024&height=1636 1024w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?scale-down-to=2048&width=3024&height=1636 2048w,https://framerusercontent.com/images/WkbjqM8K5hqKOUzSBrsnPMKBcI.png?width=3024&height=1636 3024w"
                                 }

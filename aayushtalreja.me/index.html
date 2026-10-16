@@ -507,6 +507,17 @@
             }
         }
     </style>
+    <style>
+        @keyframes framerAppearFallback {
+            to {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+        [data-framer-appear-id] {
+            animation: framerAppearFallback 0.001s forwards 0.4s;
+        }
+    </style>
     <style data-framer-breakpoint-css>
         @media(min-width: 1200px) {
             .hidden-72rtr7 {
@@ -6546,7 +6557,7 @@
                             </div>
                         </div>
                         <!--$-->
-                        <a class="framer-1ectgj2 framer-1h02jq" data-border="true" data-framer-name="Check Product Hunt" data-reset="button" href="/tanisqCV.pdf" target="_blank" rel="noopener noreferrer" onclick="window.open('/tanisqCV.pdf', '_blank'); return false;">
+                        <a class="framer-1ectgj2 framer-1h02jq" data-border="true" data-framer-name="Check Product Hunt" data-reset="button" href="/tanisqCV.pdf" target="_blank" rel="noopener noreferrer" >
                             <div class="ssr-variant hidden-dxtr67">
                                 <div class="framer-1v38aqo" data-framer-component-type="RichTextContainer" style="transform:none">
                                     <p dir="auto" style="--font-selector:R0Y7R2Vpc3QgTW9uby01MDA=;--framer-font-family:&quot;Geist Mono&quot;, monospace;--framer-font-size:10px;--framer-font-weight:500;--framer-letter-spacing:0.3px;--framer-text-color:rgb(255, 255, 255);--framer-text-transform:uppercase"
@@ -8950,8 +8961,8 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                     let e = this.getAttribute("href");
                     if (!e) return;
                     if (/Mac|iPod|iPhone|iPad/u.test(navigator.userAgent) ? t.metaKey : t.ctrlKey) return n(e, "", "_blank");
-                    let r = this.getAttribute("rel") ? ? "",
-                        c = this.getAttribute("target") ? ? "";
+                    let r = this.getAttribute("rel") ?? "",
+                        c = this.getAttribute("target") ?? "";
                     n(e, r, c)
                 }
 
@@ -8974,8 +8985,8 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                     t.preventDefault(), t.stopPropagation();
                     let e = this.getAttribute("href");
                     if (!e) return;
-                    let i = this.getAttribute("rel") ? ? "",
-                        r = this.getAttribute("target") ? ? "";
+                    let i = this.getAttribute("rel") ?? "",
+                        r = this.getAttribute("target") ?? "";
                     n(e, i, r)
                 }
                 document.querySelectorAll("[data-nested-link]").forEach(t => {
@@ -9004,7 +9015,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
             }
             var g = 'div#main a[href^="#"],div#main a[href^="/"],div#main a[href^="."]',
                 f = "div#main a[data-framer-preserve-params]",
-                S = document.currentScript ? .hasAttribute("data-preserve-internal-params");
+                S = document.currentScript ?.hasAttribute("data-preserve-internal-params");
             if (window.location.search && !navigator.webdriver && !/bot|-google|google-|yandex|ia_archiver|crawl|spider/iu.test(navigator.userAgent)) {
                 let a = document.querySelectorAll(S ? `${g},${f}` : f);
                 for (let r of a) {
@@ -9271,7 +9282,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
 
             function he(e, r) {
                 let t = _(e);
-                return () => Ae[r] ? ? t()
+                return () => Ae[r] ?? t()
             }
             var Te = he(() => {
                 try {
@@ -9353,9 +9364,9 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                 } = s;
 
                 function f() {
-                    window.MotionCancelOptimisedAnimation ? .(e, r, t)
+                    window.MotionCancelOptimisedAnimation ?.(e, r, t)
                 }
-                return i.onfinish = f, n === null || window.MotionHandoffIsComplete ? .(e) ? (f(), null) : n
+                return i.onfinish = f, n === null || window.MotionHandoffIsComplete ?.(e) ? (f(), null) : n
             }
             var X, K, me = new Set;
 
@@ -9395,11 +9406,11 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                 }, window.MotionCheckAppearSync = (a, m, p) => {
                     let c = se(a);
                     if (!c) return;
-                    let u = window.MotionHasOptimisedAnimation ? .(c, m),
-                        g = a.props.values ? .[m];
+                    let u = window.MotionHasOptimisedAnimation ?.(c, m),
+                        g = a.props.values ?.[m];
                     if (!u || !g) return;
                     let A = p.on("change", x => {
-                        g.get() !== x && (window.MotionCancelOptimisedAnimation ? .(c, m), A())
+                        g.get() !== x && (window.MotionCancelOptimisedAnimation ?.(c, m), A())
                     });
                     return A
                 });
@@ -9502,8 +9513,8 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                     s = 0,
                     i = 0;
                 for (let n of ue(e, r)) {
-                    let f = e[n] ? ? z[n],
-                        a = r[n] ? ? z[n];
+                    let f = e[n] ?? z[n],
+                        a = r[n] ?? z[n];
                     if (f === void 0 || a === void 0 || n !== "transformPerspective" && f === a && f === z[n]) continue;
                     n === "transformPerspective" && (o[n] = [f, a]);
                     let m = Ue(f, a, t),
@@ -9565,8 +9576,8 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                     f = s ? De : i,
                     a = {};
                 for (let p of ue(e, r)) {
-                    let c = e[p] ? ? z[p],
-                        u = r[p] ? ? z[p];
+                    let c = e[p] ?? z[p],
+                        u = r[p] ?? z[p];
                     c === void 0 || u === void 0 || p !== "transformPerspective" && c === u || (le(p) ? a[p] = [c, u] : n[p] = {
                         keyframes: [c, u],
                         options: p === "opacity" ? i : f
@@ -9624,7 +9635,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
 
             function Oe(e, r) {
                 let t = [],
-                    o = Object.values(e)[0] ? .length;
+                    o = Object.values(e)[0] ?.length;
                 if (!o) return;
                 let s = Object.keys(e);
                 for (let i = 0; i < o; i++) {
@@ -9646,7 +9657,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                 if (!r)
                     for (let t in e) {
                         let o = e[t];
-                        return o ? .legacy === !0 ? o : void 0
+                        return o ?.legacy === !0 ? o : void 0
                     }
             }
 
@@ -9654,7 +9665,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                 for (let [n, f] of Object.entries(e)) {
                     let a = i ? f[i] : void 0;
                     if (a === null || !a && f.default === null) continue;
-                    let m = a ? ? f.default ? ? _e(f, i);
+                    let m = a ?? f.default ?? _e(f, i);
                     if (!m) continue;
                     let {
                         initial: p,
@@ -9680,7 +9691,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
             }
 
             function Ce(e) {
-                return e ? e.find(t => t.mediaQuery ? window.matchMedia(t.mediaQuery).matches === !0 : !1) ? .hash : void 0
+                return e ? e.find(t => t.mediaQuery ? window.matchMedia(t.mediaQuery).matches === !0 : !1) ?.hash : void 0
             }
             var Dt = {
                 animateAppearEffects: Ee,
@@ -9857,10 +9868,10 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                         notation: t.notation,
                         compactDisplay: t.compactDisplay,
                         signDisplay: t.signDisplay,
-                        roundingIncrement: t.roundingIncrement ? ? 1,
-                        roundingMode: t.roundingMode ? ? "halfExpand",
-                        roundingPriority: t.roundingPriority ? ? "auto",
-                        trailingZeroDisplay: t.trailingZeroDisplay ? ? "auto"
+                        roundingIncrement: t.roundingIncrement ?? 1,
+                        roundingMode: t.roundingMode ?? "halfExpand",
+                        roundingPriority: t.roundingPriority ?? "auto",
+                        trailingZeroDisplay: t.trailingZeroDisplay ?? "auto"
                     };
                 for (let a in t) a in o || (o[a] = t[a]);
                 return o
@@ -9899,7 +9910,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
     </script>
     <script>
         typeof document < "u" && (window.process = { ...window.process,
-            env: { ...window.process ? .env,
+            env: { ...window.process ?.env,
                 NODE_ENV : "production"
             }
         });
@@ -10005,6 +10016,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
             const HOVER_SELECTORS = 'a, button, [role="button"], [data-framer-name="Desktop"], [data-framer-name="Phone"], [data-framer-name="icon-right"], [data-framer-name="icon-left"], [data-framer-name="row"], [data-framer-name="item"], [data-framer-cursor], .framer-1kzrwjf-container, [data-framer-name="button-submit"], [data-framer-name="nav-link"], [data-framer-name="email-link"]';
 
             document.addEventListener('mouseover', function(e) {
+                if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
                 if (!e.target || !e.target.closest) return;
                 const interactiveEl = e.target.closest(HOVER_SELECTORS);
                 if (interactiveEl && interactiveEl !== lastHoveredElement) {
@@ -10027,11 +10039,12 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
             // Handle CHECK HERE CV link click
             document.addEventListener('click', function(e) {
                 if (!e.target || !e.target.closest) return;
-                const cvLink = e.target.closest('a[data-framer-name="Check Product Hunt"], a.framer-1ectgj2');
+                const cvLink = e.target.closest('a[data-framer-name="Check Product Hunt"], a.framer-1ectgj2, [data-framer-name="Check Product Hunt"]');
                 if (cvLink) {
                     e.preventDefault();
                     e.stopPropagation();
-                    window.open('/tanisqCV.pdf', '_blank');
+                    const pdfUrl = new URL('tanisqCV.pdf', window.location.href).href;
+                    window.open(pdfUrl, '_blank');
                 }
             }, true);
 

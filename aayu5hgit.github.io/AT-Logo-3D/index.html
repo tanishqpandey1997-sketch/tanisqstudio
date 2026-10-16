@@ -106,8 +106,8 @@
     shape.holes.push(hole);
 
     const app = document.getElementById('app');
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, premultipliedAlpha: false });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, premultipliedAlpha: false, powerPreference: 'low-power' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     const initW = app.clientWidth || window.innerWidth || 400;
     const initH = app.clientHeight || window.innerHeight || 400;
     renderer.setSize(initW, initH);
@@ -148,8 +148,8 @@
         bevelEnabled: true,
         bevelThickness: bevel,
         bevelSize: bevel,
-        bevelSegments: 5,
-        curveSegments: 64
+        bevelSegments: 3,
+        curveSegments: 24
     });
 
     const CX = 250, CY = 250;
@@ -219,19 +219,53 @@
     el.addEventListener('pointerleave', up);
 
     let isVisible = true;
-    if (typeof IntersectionObserver !== 'undefined') {
-        const observer = new IntersectionObserver((entries) => {
-            isVisible = entries[0].isIntersecting;
-        }, { threshold: 0.01 });
-        observer.observe(document.documentElement);
+
+    function checkVisibility() {
+        if (document.hidden) return false;
+        try {
+            if (window.frameElement) {
+                const rect = window.frameElement.getBoundingClientRect();
+                const parentWin = window.parent;
+                if (rect.width === 0 || rect.height === 0) return false;
+                const vh = parentWin.innerHeight || parentWin.document.documentElement.clientHeight;
+                const vw = parentWin.innerWidth || parentWin.document.documentElement.clientWidth;
+                if (rect.bottom < -50 || rect.top > vh + 50 || rect.right < -50 || rect.left > vw + 50) {
+                    return false;
+                }
+                const style = parentWin.getComputedStyle(window.frameElement);
+                if (style.display === 'none' || style.visibility === 'hidden') return false;
+            }
+        } catch(e) {}
+        return true;
     }
 
+    try {
+        if (window.frameElement && window.parent && window.parent.IntersectionObserver) {
+            const observer = new window.parent.IntersectionObserver((entries) => {
+                isVisible = entries[0].isIntersecting;
+            }, { threshold: 0.01 });
+            observer.observe(window.frameElement);
+        } else if (typeof IntersectionObserver !== 'undefined') {
+            const observer = new IntersectionObserver((entries) => {
+                isVisible = entries[0].isIntersecting;
+            }, { threshold: 0.01 });
+            observer.observe(document.documentElement);
+        }
+    } catch(e) {}
+
     document.addEventListener('visibilitychange', () => {
-        isVisible = !document.hidden;
+        isVisible = !document.hidden && checkVisibility();
     });
+    try {
+        if (window.parent && window.parent !== window) {
+            window.parent.document.addEventListener('visibilitychange', () => {
+                isVisible = !window.parent.document.hidden && checkVisibility();
+            });
+        }
+    } catch(e) {}
 
     renderer.setAnimationLoop(() => {
-        if (!isVisible) return;
+        if (!isVisible || !checkVisibility()) return;
         if (!dragging) {
             if (Math.abs(vel) > AUTO) {
                 group.rotation.y += vel;

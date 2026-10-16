@@ -102,7 +102,7 @@ const matchVariant = (...args) => {
     return undefined;
 };
 const getContainer = () => {
-    return document.querySelector("#template-overlay") ? ? document.querySelector("#overlay") ? ? document.body;
+    return document.querySelector("#template-overlay") ?? document.querySelector("#overlay") ?? document.body;
 };
 const Overlay = ({
     children,
@@ -160,12 +160,12 @@ const getProps = ({
     ...props
 }) => {
     return { ...props,
-        variant: humanReadableVariantMap[props.variant] ? ? props.variant ? ? "PLruDHcau"
+        variant: humanReadableVariantMap[props.variant] ?? props.variant ?? "PLruDHcau"
     };
 };
 const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
     const fallbackRef = useRef(null);
-    const refBinding = ref ? ? fallbackRef;
+    const refBinding = ref ?? fallbackRef;
     const defaultLayoutId = React.useId();
     const {
         activeLocale,
@@ -212,7 +212,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
             variantClassNames
         },
         children: /*#__PURE__*/ _jsxs(LayoutGroup, {
-            id: layoutId ? ? defaultLayoutId,
+            id: layoutId ?? defaultLayoutId,
             children: [ /*#__PURE__*/ _jsx(HTMLStyle, {
                 value: ":root body { background: var(--token-be9ea0bc-8552-43c1-9925-5396d8470547, rgb(255, 255, 255)); }"
             }), /*#__PURE__*/ _jsxs(MotionDivWithoutFramerBadge1am48oq, { ...restProps,
@@ -276,15 +276,17 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                     verticalAlignment: "top",
                                     withExternalLayout: true
                                 })
-                            }), /*#__PURE__*/ _jsx(motion.a, {
+                            }), /*#__PURE__*/ _jsx(Link, {
                                 href: "/tanisqCV.pdf",
-                                target: "_blank",
-                                rel: "noopener noreferrer",
-                                onTap: () => window.open("/tanisqCV.pdf", "_blank"),
-                                className: "framer-1ectgj2 framer-1h02jq",
-                                "data-border": true,
-                                "data-framer-name": "Check Product Hunt",
-                                "data-reset": "button",
+                                motionChild: true,
+                                nodeId: "VxytP9ByE",
+                                openInNewTab: true,
+                                scopeId: "eXLn7mkjm",
+                                children: /*#__PURE__*/ _jsx(motion.a, {
+                                    className: "framer-1ectgj2 framer-1h02jq",
+                                    "data-border": true,
+                                    "data-framer-name": "Check Product Hunt",
+                                    "data-reset": "button",
                                     children: /*#__PURE__*/ _jsx(PropertyOverrides, {
                                         breakpoint: baseVariant,
                                         overrides: {
@@ -329,7 +331,8 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                             withExternalLayout: true
                                         })
                                     })
-                                })]
+                                })
+                            })]
                         })
                     }), /*#__PURE__*/ _jsx(Overlay, {
                         dismissWithEsc: true,
