@@ -509,6 +509,34 @@
                 line-height: 1.2 !important;
                 margin: 0 !important;
             }
+
+            /* Eliminate blocking fullscreen loader on mobile */
+            .framer-fm6xut-container,
+            [data-framer-name="loader"] {
+                display: none !important;
+                pointer-events: none !important;
+                visibility: hidden !important;
+            }
+
+            /* Hide background ambient glitch videos on mobile to stop iOS Low Power Mode play button overlay */
+            .framer-1x1t1n2-container,
+            .framer-10iueed-container,
+            .framer-kwhq50-container,
+            [data-framer-name="glitch-gif"],
+            [data-framer-name="video"] {
+                display: none !important;
+            }
+
+            /* Prevent layout overflow on narrow mobile screens */
+            .framer-fRIJt.framer-72rtr7 {
+                width: 100% !important;
+                max-width: 100vw !important;
+            }
+
+            /* Native touch momentum scrolling */
+            html, body {
+                -webkit-overflow-scrolling: touch !important;
+            }
         }
     </style>
     <style>
@@ -9930,7 +9958,7 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/framer.DIOYHPzw.mjs">
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/shared-lib.DJDD42Fs.mjs">
     <link rel="modulepreload" fetchpriority="low" href="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/oLZImXA_dkkkiacex51G27FlwZgpQI5Msg2HXvWLgfY.B__cT9TA.mjs">
-    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/script_main.BM_-cmCb.mjs?v=2"></script>
+    <script type="module" async data-framer-bundle="main" fetchpriority="low" src="./framerusercontent.com/sites/4OrEgOLGdSfOIOkKewCsF8/script_main.BM_-cmCb.mjs?v=3"></script>
     <div id="svg-templates" style="position: absolute; overflow: hidden; bottom: 0; left: 0; width: 0; height: 0; z-index: 0; contain: strict" aria-hidden="true">
         <svg id="146875479" display="block" role="presentation" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" fill-opacity="var(--1m6trwb, 0)" fill="var(--21h8s6, rgb(0, 0, 0))" height="18px" id="j3DQ2Myaf" transform="translate(3 3)" width="18px"/><path d="M 0 0 L 18 0" fill="transparent" height="1px" id="gKxvG0UIA" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 12)" width="18px"/><path d="M 0 9 C 0 4.029 4.029 0 9 0 C 13.971 0 18 4.029 18 9 C 18 13.971 13.971 18 9 18 C 4.029 18 0 13.971 0 9 Z" fill="transparent" height="18px" id="ElC_cWAtq" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(3 3)" width="18px"/><path d="M 7.5 9 C 7.5 15 3.75 18 3.75 18 C 3.75 18 0 15 0 9 C 0 3 3.75 0 3.75 0 C 3.75 0 7.5 3 7.5 9 Z" fill="transparent" height="18px" id="pQ0siYsh5" stroke-dasharray="" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--pgex8v, 1.5)" stroke="var(--21h8s6, rgb(0, 0, 0))" transform="translate(8.25 3)" width="7.5px"/></svg>
     </div>
@@ -10061,6 +10089,28 @@ Quick, efficient, and a burst of energy with buzzing ideas to work with, Tanisq 
                     }
                 }
             }, true);
+
+            // Mobile-only instant display and background video cleanup
+            function cleanupMobile() {
+                if (window.innerWidth <= 810 || /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                    var loaders = document.querySelectorAll(".framer-fm6xut-container, [data-framer-name='loader']");
+                    for (var i = 0; i < loaders.length; i++) {
+                        loaders[i].style.display = "none";
+                    }
+                    var ambientVideos = document.querySelectorAll(".framer-1x1t1n2-container video, .framer-10iueed-container video, .framer-kwhq50-container video, [data-framer-name='glitch-gif'] video");
+                    for (var j = 0; j < ambientVideos.length; j++) {
+                        try {
+                            ambientVideos[j].pause();
+                            ambientVideos[j].src = "";
+                            ambientVideos[j].style.display = "none";
+                        } catch(e) {}
+                    }
+                }
+            }
+            cleanupMobile();
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", cleanupMobile);
+            }
 
             // Smooth scrolling for navigation links and section jumps
             document.addEventListener('click', function(e) {
