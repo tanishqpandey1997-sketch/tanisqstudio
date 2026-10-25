@@ -1976,6 +1976,7 @@ const Component = /*#__PURE__*/ React.forwardRef(function(props, ref) {
                                                 srcSet: "/realestate.png 1586w"
                                             }, ""),
                                             fhhHabEMA: "E-COMMERCE",
+                                            f_jVoJ8Dh: "https://aera-ecommerce.vercel.app/",
                                             HaQQ2BJWM: addImageAlt({
                                                 pixelHeight: 1086,
                                                 pixelWidth: 1448,
