@@ -105,120 +105,8 @@
     }
     shape.holes.push(hole);
 
-    const app = document.getElementById('app');
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, premultipliedAlpha: false, powerPreference: 'low-power' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
-    const initW = app.clientWidth || window.innerWidth || 400;
-    const initH = app.clientHeight || window.innerHeight || 400;
-    renderer.setSize(initW, initH);
-    renderer.setClearColor(0x000000, 0);
-    renderer.shadowMap.enabled = false;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.2;
-    app.appendChild(renderer.domElement);
-
-    const scene = new THREE.Scene();
-    const pmrem = new THREE.PMREMGenerator(renderer);
-    scene.environment = pmrem.fromScene(createRoomEnvironment(), 0.04).texture;
-
-    const camera = new THREE.PerspectiveCamera(33, initW / initH, 1, 4000);
-    camera.position.set(0, 0, 1150);
-
-    const key = new THREE.DirectionalLight(0xffffff, 2.5);
-    key.position.set(-160, 220, 340);
-    scene.add(key);
-
-    const rim = new THREE.DirectionalLight(0xffffff, 2.0);
-    rim.position.set(260, -120, -160);
-    scene.add(rim);
-
-    const fill = new THREE.DirectionalLight(0xffffff, 1.2);
-    fill.position.set(120, 60, 260);
-    scene.add(fill);
-
-    scene.add(new THREE.AmbientLight(0xffffff, 0.4));
-
-    const group = new THREE.Group();
-    group.scale.y = -1;
-    scene.add(group);
-
-    const depth = 42, bevel = Math.min(9, depth * 0.28);
-    const geo = new THREE.ExtrudeGeometry(shape, {
-        depth,
-        bevelEnabled: true,
-        bevelThickness: bevel,
-        bevelSize: bevel,
-        bevelSegments: 3,
-        curveSegments: 24
-    });
-
-    const CX = 250, CY = 250;
-    geo.translate(-CX, -CY, -depth / 2);
-    geo.computeVertexNormals();
-
-    const mat = new THREE.MeshPhysicalMaterial({
-        color: new THREE.Color('#222222'),
-        metalness: 0.2,
-        roughness: 0.35,
-        clearcoat: 0.85,
-        clearcoatRoughness: 0.15,
-        envMapIntensity: 0.8,
-        side: THREE.DoubleSide
-    });
-
-    group.add(new THREE.Mesh(geo, mat));
-
-    function onResize() {
-        const w = app.clientWidth || window.innerWidth || 400;
-        const h = app.clientHeight || window.innerHeight || 400;
-        camera.aspect = w / h;
-        camera.updateProjectionMatrix();
-        renderer.setSize(w, h);
-    }
-    window.addEventListener('resize', onResize);
-    setTimeout(onResize, 50);
-
-    /* ---- interaction: drag to rotate, auto-spin ---- */
-    const AUTO = 0.02;
-    let dragging = false, lastX = 0, vel = AUTO, idleTimer = 0;
-    const el = renderer.domElement;
-    el.style.touchAction = 'pan-y';
-    el.style.cursor = 'grab';
-
-    function down(x) {
-        dragging = true;
-        lastX = x;
-        vel = 0;
-        idleTimer = 0;
-        el.style.cursor = 'grabbing';
-    }
-
-    function move(x) {
-        if (!dragging) return;
-        const dx = x - lastX;
-        lastX = x;
-        const d = dx * 0.01;
-        group.rotation.y += d;
-        vel = d;
-    }
-
-    function up() {
-        if (!dragging) return;
-        dragging = false;
-        el.style.cursor = 'grab';
-        idleTimer = 0;
-    }
-
-    el.addEventListener('pointerdown', e => {
-        el.setPointerCapture(e.pointerId);
-        down(e.clientX);
-    });
-    el.addEventListener('pointermove', e => move(e.clientX));
-    el.addEventListener('pointerup', up);
-    el.addEventListener('pointercancel', up);
-    el.addEventListener('pointerleave', up);
-
-    let isVisible = true;
+    let initialized = false;
+    let isVisible = false;
 
     function checkVisibility() {
         if (document.hidden) return false;
@@ -239,19 +127,177 @@
         return true;
     }
 
+    function initThree() {
+        if (initialized) return;
+        initialized = true;
+
+        const app = document.getElementById('app');
+        let renderer;
+        try {
+            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, premultipliedAlpha: false, powerPreference: 'low-power' });
+        } catch(err) {
+            console.warn('WebGL context unavailable', err);
+            return;
+        }
+
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+        const initW = app.clientWidth || window.innerWidth || 400;
+        const initH = app.clientHeight || window.innerHeight || 400;
+        renderer.setSize(initW, initH);
+        renderer.setClearColor(0x000000, 0);
+        renderer.shadowMap.enabled = false;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.2;
+        app.appendChild(renderer.domElement);
+
+        const scene = new THREE.Scene();
+        try {
+            const pmrem = new THREE.PMREMGenerator(renderer);
+            scene.environment = pmrem.fromScene(createRoomEnvironment(), 0.04).texture;
+        } catch(e) {}
+
+        const camera = new THREE.PerspectiveCamera(33, initW / initH, 1, 4000);
+        camera.position.set(0, 0, 1150);
+
+        const key = new THREE.DirectionalLight(0xffffff, 2.5);
+        key.position.set(-160, 220, 340);
+        scene.add(key);
+
+        const rim = new THREE.DirectionalLight(0xffffff, 2.0);
+        rim.position.set(260, -120, -160);
+        scene.add(rim);
+
+        const fill = new THREE.DirectionalLight(0xffffff, 1.2);
+        fill.position.set(120, 60, 260);
+        scene.add(fill);
+
+        scene.add(new THREE.AmbientLight(0xffffff, 0.4));
+
+        const group = new THREE.Group();
+        group.scale.y = -1;
+        scene.add(group);
+
+        const depth = 42, bevel = Math.min(9, depth * 0.28);
+        const geo = new THREE.ExtrudeGeometry(shape, {
+            depth,
+            bevelEnabled: true,
+            bevelThickness: bevel,
+            bevelSize: bevel,
+            bevelSegments: 3,
+            curveSegments: 24
+        });
+
+        const CX = 250, CY = 250;
+        geo.translate(-CX, -CY, -depth / 2);
+        geo.computeVertexNormals();
+
+        const mat = new THREE.MeshPhysicalMaterial({
+            color: new THREE.Color('#222222'),
+            metalness: 0.2,
+            roughness: 0.35,
+            clearcoat: 0.85,
+            clearcoatRoughness: 0.15,
+            envMapIntensity: 0.8,
+            side: THREE.DoubleSide
+        });
+
+        group.add(new THREE.Mesh(geo, mat));
+
+        function onResize() {
+            const w = app.clientWidth || window.innerWidth || 400;
+            const h = app.clientHeight || window.innerHeight || 400;
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+        }
+        window.addEventListener('resize', onResize);
+
+        /* ---- interaction: drag to rotate, auto-spin ---- */
+        const AUTO = 0.02;
+        let dragging = false, lastX = 0, vel = AUTO, idleTimer = 0;
+        const el = renderer.domElement;
+        el.style.touchAction = 'pan-y';
+        el.style.cursor = 'grab';
+
+        function down(x) {
+            dragging = true;
+            lastX = x;
+            vel = 0;
+            idleTimer = 0;
+            el.style.cursor = 'grabbing';
+        }
+
+        function move(x) {
+            if (!dragging) return;
+            const dx = x - lastX;
+            lastX = x;
+            const d = dx * 0.01;
+            group.rotation.y += d;
+            vel = d;
+        }
+
+        function up() {
+            if (!dragging) return;
+            dragging = false;
+            el.style.cursor = 'grab';
+            idleTimer = 0;
+        }
+
+        el.addEventListener('pointerdown', e => {
+            el.setPointerCapture(e.pointerId);
+            down(e.clientX);
+        });
+        el.addEventListener('pointermove', e => move(e.clientX));
+        el.addEventListener('pointerup', up);
+        el.addEventListener('pointercancel', up);
+        el.addEventListener('pointerleave', up);
+
+        function renderFrame() {
+            if (!isVisible || !checkVisibility()) return;
+            if (!dragging) {
+                if (Math.abs(vel) > AUTO) {
+                    group.rotation.y += vel;
+                    vel *= 0.94;
+                } else {
+                    idleTimer = Math.min(idleTimer + 0.02, 1);
+                    vel = AUTO;
+                    group.rotation.y += vel * idleTimer;
+                }
+            }
+            renderer.render(scene, camera);
+        }
+
+        renderer.setAnimationLoop(renderFrame);
+    }
+
+    // Lazy initialization only when iframe is in viewport
     try {
         if (window.frameElement && window.parent && window.parent.IntersectionObserver) {
             const observer = new window.parent.IntersectionObserver((entries) => {
-                isVisible = entries[0].isIntersecting;
+                const entry = entries[0];
+                isVisible = entry && entry.isIntersecting;
+                if (isVisible) {
+                    initThree();
+                }
             }, { threshold: 0.01 });
             observer.observe(window.frameElement);
         } else if (typeof IntersectionObserver !== 'undefined') {
             const observer = new IntersectionObserver((entries) => {
-                isVisible = entries[0].isIntersecting;
+                const entry = entries[0];
+                isVisible = entry && entry.isIntersecting;
+                if (isVisible) {
+                    initThree();
+                }
             }, { threshold: 0.01 });
             observer.observe(document.documentElement);
+        } else {
+            isVisible = true;
+            initThree();
         }
-    } catch(e) {}
+    } catch(e) {
+        isVisible = true;
+        initThree();
+    }
 
     document.addEventListener('visibilitychange', () => {
         isVisible = !document.hidden && checkVisibility();
@@ -263,21 +309,6 @@
             });
         }
     } catch(e) {}
-
-    renderer.setAnimationLoop(() => {
-        if (!isVisible || !checkVisibility()) return;
-        if (!dragging) {
-            if (Math.abs(vel) > AUTO) {
-                group.rotation.y += vel;
-                vel *= 0.94;
-            } else {
-                idleTimer = Math.min(idleTimer + 0.02, 1);
-                vel = AUTO;
-                group.rotation.y += vel * idleTimer;
-            }
-        }
-        renderer.render(scene, camera);
-    });
 </script>
 </body>
 </html>
