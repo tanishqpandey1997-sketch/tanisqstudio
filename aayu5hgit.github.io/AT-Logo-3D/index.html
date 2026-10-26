@@ -19,6 +19,15 @@
         width: 100%;
         height: 100%;
     }
+    #fallback {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+    }
     canvas {
         display: block;
         width: 100% !important;
@@ -28,20 +37,32 @@
 </head>
 <body>
 <div id="app"></div>
+<div id="fallback">
+    <svg viewBox="0 0 500 500" style="width:68%;height:68%;max-width:100%;max-height:100%;" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 39.38 88.64 L 45.83 88.17 L 395.32 88.18 L 406.8 89.25 L 415.41 91.23 L 425.46 94.97 L 433.35 98.87 L 439.81 103.01 L 448.42 109.89 L 455.35 116.88 L 461.72 124.77 L 466.75 132.67 L 470.74 140.56 L 474.69 150.61 L 477.37 160.66 L 478.94 169.27 L 479.91 180.75 L 478.34 199.41 L 473.42 220.94 L 470.09 229.55 L 463.68 241.75 L 457.14 251.08 L 448.38 261.01 L 439.1 268.81 L 430.48 274.72 L 417.57 281.29 L 406.8 285.26 L 392.45 288.52 L 380.25 289.79 L 317.82 289.84 L 305.62 290.55 L 284.8 289.84 L 256.1 290.63 L 251.12 291.85 L 247.98 294.32 L 245.61 297.72 L 191.18 396.76 L 187.99 401.78 L 184.29 405.91 L 179.31 409.23 L 172.14 410.98 L 148.46 411.82 L 119.75 411.8 L 115.45 411.24 L 112.08 409.31 L 109.47 405.36 L 108.88 401.06 L 110.33 396.04 L 157.58 307.05 L 221.68 183.62 L 230.02 167.11 L 230.74 162.95 L 228.68 160.62 L 224.52 159.95 L 91.05 159.94 L 81.72 160.51 L 64.49 160 L 39.38 160.65 L 29.33 159.26 L 25.79 157.32 L 23.3 154.86 L 21.24 151.33 L 20.37 147.74 L 24.92 108.99 L 26.48 100.37 L 28.8 95.39 L 32.96 91.26 L 39.38 88.64 Z M 395.32 217.23 L 400.7 211.61 L 404.79 205.15 L 407.16 197.97 L 408.21 190.8 L 407.05 182.18 L 405.14 176.44 L 401.55 170.7 L 396.04 165.18 L 388.86 161.18 L 378.81 159.33 L 326.43 159.24 L 320.75 160.28 L 318.04 162.84 L 288.74 218.78 L 287.53 222.29 L 288.62 224.24 L 293.42 225.22 L 371.64 225.22 L 384.56 223.04 L 391.01 220.3 L 395.32 217.23 Z" fill="#222222"/>
+    </svg>
+</div>
 
 <script type="module">
     let THREE = window.THREE;
     if (!THREE) {
         try {
-            THREE = await import('/cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-        } catch (e) {
+            THREE = await import('../../cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+        } catch (e1) {
             try {
-                THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
-            } catch (e2) {}
+                THREE = await import('/cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+            } catch (e2) {
+                try {
+                    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js');
+                } catch (e3) {
+                    console.warn('Three.js failed to load', e3);
+                }
+            }
         }
     }
+
     if (!THREE) {
-        THREE = window.THREE;
+        console.warn('Three.js not available, keeping fallback SVG');
     }
 
     function createRoomEnvironment() {
@@ -92,49 +113,23 @@
         [391.01, 220.3], [395.32, 217.23]
     ];
 
-    const shape = new THREE.Shape();
-    shape.moveTo(outerPts[0][0], outerPts[0][1]);
-    for (let i = 1; i < outerPts.length; i++) {
-        shape.lineTo(outerPts[i][0], outerPts[i][1]);
-    }
-
-    const hole = new THREE.Path();
-    hole.moveTo(holePts[0][0], holePts[0][1]);
-    for (let i = 1; i < holePts.length; i++) {
-        hole.lineTo(holePts[i][0], holePts[i][1]);
-    }
-    shape.holes.push(hole);
-
     let initialized = false;
-    let isVisible = false;
-
-    function checkVisibility() {
-        if (document.hidden) return false;
-        try {
-            if (window.frameElement) {
-                const rect = window.frameElement.getBoundingClientRect();
-                const parentWin = window.parent;
-                if (rect.width === 0 || rect.height === 0) return false;
-                const vh = parentWin.innerHeight || parentWin.document.documentElement.clientHeight;
-                const vw = parentWin.innerWidth || parentWin.document.documentElement.clientWidth;
-                if (rect.bottom < -50 || rect.top > vh + 50 || rect.right < -50 || rect.left > vw + 50) {
-                    return false;
-                }
-                const style = parentWin.getComputedStyle(window.frameElement);
-                if (style.display === 'none' || style.visibility === 'hidden') return false;
-            }
-        } catch(e) {}
-        return true;
-    }
+    let isVisible = true;
 
     function initThree() {
-        if (initialized) return;
+        if (initialized || !THREE) return;
         initialized = true;
 
         const app = document.getElementById('app');
+        const fallback = document.getElementById('fallback');
         let renderer;
         try {
-            renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, premultipliedAlpha: false, powerPreference: 'low-power' });
+            renderer = new THREE.WebGLRenderer({
+                antialias: true,
+                alpha: true,
+                premultipliedAlpha: false,
+                powerPreference: 'default'
+            });
         } catch(err) {
             console.warn('WebGL context unavailable', err);
             return;
@@ -150,10 +145,17 @@
         renderer.toneMappingExposure = 1.2;
         app.appendChild(renderer.domElement);
 
+        const canvas = renderer.domElement;
+        canvas.addEventListener('webglcontextlost', (e) => {
+            e.preventDefault();
+        }, false);
+
         const scene = new THREE.Scene();
         try {
             const pmrem = new THREE.PMREMGenerator(renderer);
-            scene.environment = pmrem.fromScene(createRoomEnvironment(), 0.04).texture;
+            const envScene = createRoomEnvironment();
+            scene.environment = pmrem.fromScene(envScene, 0.04).texture;
+            pmrem.dispose();
         } catch(e) {}
 
         const camera = new THREE.PerspectiveCamera(33, initW / initH, 1, 4000);
@@ -176,6 +178,19 @@
         const group = new THREE.Group();
         group.scale.y = -1;
         scene.add(group);
+
+        const shape = new THREE.Shape();
+        shape.moveTo(outerPts[0][0], outerPts[0][1]);
+        for (let i = 1; i < outerPts.length; i++) {
+            shape.lineTo(outerPts[i][0], outerPts[i][1]);
+        }
+
+        const hole = new THREE.Path();
+        hole.moveTo(holePts[0][0], holePts[0][1]);
+        for (let i = 1; i < holePts.length; i++) {
+            hole.lineTo(holePts[i][0], holePts[i][1]);
+        }
+        shape.holes.push(hole);
 
         const depth = 42, bevel = Math.min(9, depth * 0.28);
         const geo = new THREE.ExtrudeGeometry(shape, {
@@ -202,6 +217,12 @@
         });
 
         group.add(new THREE.Mesh(geo, mat));
+
+        // Fade out fallback SVG once 3D scene is ready
+        if (fallback) {
+            fallback.style.opacity = '0';
+            setTimeout(() => { fallback.style.display = 'none'; }, 400);
+        }
 
         function onResize() {
             const w = app.clientWidth || window.innerWidth || 400;
@@ -253,7 +274,7 @@
         el.addEventListener('pointerleave', up);
 
         function renderFrame() {
-            if (!isVisible || !checkVisibility()) return;
+            if (!isVisible || document.hidden) return;
             if (!dragging) {
                 if (Math.abs(vel) > AUTO) {
                     group.rotation.y += vel;
@@ -270,45 +291,31 @@
         renderer.setAnimationLoop(renderFrame);
     }
 
-    // Lazy initialization only when iframe is in viewport
-    try {
-        if (window.frameElement && window.parent && window.parent.IntersectionObserver) {
-            const observer = new window.parent.IntersectionObserver((entries) => {
-                const entry = entries[0];
-                isVisible = entry && entry.isIntersecting;
-                if (isVisible) {
+    // Pure self-contained IntersectionObserver inside the frame
+    if (typeof IntersectionObserver !== 'undefined') {
+        const observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                isVisible = entry.isIntersecting;
+                if (isVisible && !initialized) {
                     initThree();
                 }
-            }, { threshold: 0.01 });
-            observer.observe(window.frameElement);
-        } else if (typeof IntersectionObserver !== 'undefined') {
-            const observer = new IntersectionObserver((entries) => {
-                const entry = entries[0];
-                isVisible = entry && entry.isIntersecting;
-                if (isVisible) {
-                    initThree();
-                }
-            }, { threshold: 0.01 });
-            observer.observe(document.documentElement);
-        } else {
-            isVisible = true;
-            initThree();
-        }
-    } catch(e) {
-        isVisible = true;
+            }
+        }, { threshold: 0.01 });
+        observer.observe(document.body);
+    } else {
         initThree();
     }
 
-    document.addEventListener('visibilitychange', () => {
-        isVisible = !document.hidden && checkVisibility();
-    });
-    try {
-        if (window.parent && window.parent !== window) {
-            window.parent.document.addEventListener('visibilitychange', () => {
-                isVisible = !window.parent.document.hidden && checkVisibility();
-            });
+    // Safety fallback: ensure initialization runs even if observer is delayed
+    setTimeout(() => {
+        if (!initialized) {
+            initThree();
         }
-    } catch(e) {}
+    }, 1000);
+
+    document.addEventListener('visibilitychange', () => {
+        isVisible = !document.hidden;
+    });
 </script>
 </body>
 </html>
